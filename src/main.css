@@ -9,6 +9,11 @@ body {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .flex-wrapper, .heading {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -105,7 +110,7 @@ body {
 }
 
 .grid h2 {
-  font-size: 2em;
+  font-size: 2.5em;
   margin: 1em;
 }
 
@@ -116,26 +121,44 @@ body {
   background-color: white;
 }
 
-.grid i {
+.grid a {
   grid-row: span 1;
   font-size: 3em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0.25em;
 }
 
-.grid i span {
+.grid a span {
   font-family: 'Raleway', sans-serif;
-  font-weight: 300;
+  font-weight: 500;
   font-size: 0.3333em;
-  margin: auto 1em auto 0.5em;
+  width: 100%;
+  margin-top: 0.5em;
 }
 
-.grid i.fa-file-pdf {
+@media only screen and (max-width: 515px) {
+  .grid a {
+    margin: 0;
+    width: auto;
+  }
+  .grid a span {
+    display: none;
+  }
+}
+
+.grid a.fa-file-pdf {
   font-size: calc(3em - 35%);
 }
 
