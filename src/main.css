@@ -1,5 +1,3 @@
-@import "helpers";
-
 html {
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -11,17 +9,22 @@ body {
   margin: 0;
 }
 
-a {
-  // display: flex;
-}
- 
 .flex-wrapper, .heading {
-  @include flex-wrap;
-  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .about {
-  background: linear-gradient( to top, rgba(0,0,70,1) 0%, rgba(28,181,224,1) 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#000046), to(#1cb5e0));
+  background: linear-gradient(to top, #000046 0%, #1cb5e0 100%);
   color: white;
   position: relative;
   min-height: 100vh;
@@ -33,20 +36,13 @@ a {
 
 .landing .flex-wrapper {
   height: 100%;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .landing .content {
-  // align-content: space-around;
-  // display: flex;
-  // flex-flow: row wrap;
-  // align-items: center;
-  // justify-content: center;
-  margin: 5vh auto 0 auto
-
-  // p, h1, h2 {
-  //   margin: auto;
-  // }
+  margin: 5vh auto 0 auto;
 }
 
 .landing p {
@@ -56,7 +52,6 @@ a {
   color: #1D6297;
   width: 100%;
   margin-bottom: 0;
-
 }
 
 .landing h1 {
@@ -80,20 +75,35 @@ a {
 .grid .heading {
   grid-row: span 1;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  align-items: center;
-
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .grid .icons {
   grid-row: span 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   width: 100%;
 }
+
 .grid h2 {
   font-size: 2em;
   margin: 1em;
@@ -109,8 +119,12 @@ a {
 .grid i {
   grid-row: span 1;
   font-size: 3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0.25em;
 }
 
@@ -125,32 +139,42 @@ a {
   font-size: calc(3em - 35%);
 }
 
-
 .grid p {
   grid-row: span 1;
 }
- 
-.border { 
-  width:100%;
-  position:static;
+
+.border {
+  width: 100%;
+  position: static;
   height: 15vh;
   min-height: 100px;
 }
 
 .wave {
-  background: url(newwave.svg) repeat-x; 
+  background: url(newwave.svg) repeat-x;
   position: absolute;
   background-size: contain;
   width: 100vw;
   height: 100px;
   opacity: 1;
-  animation: wave 10s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+  -webkit-animation: wave 10s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+          animation: wave 10s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
 }
 
 .wave:nth-of-type(2) {
-  animation: wave 10s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -0.5s infinite, swell 10s ease -1.25s infinite;
+  -webkit-animation: wave 10s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.5s infinite, swell 10s ease -1.25s infinite;
+          animation: wave 10s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.5s infinite, swell 10s ease -1.25s infinite;
   opacity: 0.5;
   position: absolute;
+}
+
+@-webkit-keyframes wave {
+  0% {
+    background-position-x: 0%;
+  }
+  100% {
+    background-position-x: -100vw;
+  }
 }
 
 @keyframes wave {
@@ -162,16 +186,37 @@ a {
   }
 }
 
-@keyframes swell {
+@-webkit-keyframes swell {
   0%, 100% {
-    transform: translateY(1vh);
+    -webkit-transform: translateY(1vh);
+            transform: translateY(1vh);
   }
   50% {
-    transform: translateY(-1vh);
+    -webkit-transform: translateY(-1vh);
+            transform: translateY(-1vh);
   }
 }
 
-@media only screen and (min-width:800px) {
+@keyframes swell {
+  0%, 100% {
+    -webkit-transform: translateY(1vh);
+            transform: translateY(1vh);
+  }
+  50% {
+    -webkit-transform: translateY(-1vh);
+            transform: translateY(-1vh);
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  @-webkit-keyframes wave {
+    0% {
+      background-position-x: 0%;
+    }
+    100% {
+      background-position-x: -800px;
+    }
+  }
   @keyframes wave {
     0% {
       background-position-x: 0%;
@@ -180,7 +225,6 @@ a {
       background-position-x: -800px;
     }
   }
-
 }
 
 .content {
@@ -196,60 +240,71 @@ a {
   line-height: 16vh !important;
   text-decoration: none;
   color: inherit;
-  background: linear-gradient( to top, rgba(0,0,70,0.8) 0%, rgba(255,255,255,0) 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 70, 0.8)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to top, rgba(0, 0, 70, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 .fa-chevron-down.scrolled {
   background: none;
   height: 0;
   overflow: hidden;
+  -webkit-transition: all 0.6s;
   transition: all 0.6s;
 }
 
 .grid {
+  display: -ms-grid;
   display: grid;
   grid-auto-rows: auto;
   grid-gap: 2% 5%;
   justify-items: center;
   place-content: stretch;
-
 }
 
 nav {
   background: #fff;
   height: 80px;
   line-height: 80px;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 9998;
+  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
+
 nav.scrollUp {
-  transform: translateY(-80px);
+  -webkit-transform: translateY(-80px);
+          transform: translateY(-80px);
 }
+
 nav ul.navbar-menu {
   margin: 0;
   padding: 0;
   display: inline-block;
   float: right;
 }
+
 nav ul.navbar-menu li {
   display: inline-block;
   margin: 0 10px;
 }
+
 nav ul.navbar-menu li a {
   color: #666;
   font-size: 14px;
 }
+
 nav a#brand {
   text-transform: uppercase;
   float: left;
   font-weight: 800;
   font-size: 20px;
 }
+
 nav button {
   background: none;
   width: 30px;
@@ -261,6 +316,7 @@ nav button {
   cursor: pointer;
   display: none;
 }
+
 nav button span {
   width: 30px;
   height: 40px;
@@ -274,11 +330,8 @@ nav button span {
   nav ul.navbar-menu {
     display: none;
   }
-
   nav button {
     display: block;
   }
 }
-
-
-
+/*# sourceMappingURL=main.css.map */
