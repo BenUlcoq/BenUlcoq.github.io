@@ -1,0 +1,78 @@
+@import "helpers";
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  overflow-x: hidden;
+}
+
+.flex-wrapper, .heading {
+  @include flex-wrap;
+  align-items: center;
+}
+
+.about {
+  background: linear-gradient( to top, rgba(0,0,70,1) 0%, rgba(28,181,224,1) 100%);
+  color: white;
+}
+
+
+
+
+.grid h2 {
+  grid-column: span 3;
+  justify-self: start;
+}
+
+.grid .photo {
+  grid-column: 1 / span 2;
+  font-size: 3em;
+  width: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  align-self: center;
+}
+
+.grid i {
+  grid-column: span 1;
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+
+
+}
+
+.grid i.fa-file-pdf {
+  font-size: calc(2em - 25%);
+}
+
+
+.grid p {
+  grid-column: span 5;
+}
+
+
+
+.content {
+  max-width: 90%;
+  margin: auto;
+}
+
+.fa-chevron-down {
+  width: 100%;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 2% 2%;
+  justify-items: center;
+  place-content: stretch;
+}
+
+
