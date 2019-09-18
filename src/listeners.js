@@ -6,6 +6,10 @@ $(document).ready(function () {
        navbar = $('nav');
 
    $(window).scroll(function () {
+
+    var element = document.getElementById("chevron-down");
+    element.classList.add("scrolled");
+
       var a = $(window).scrollTop();
       var b = navbar.height();
      
@@ -17,8 +21,6 @@ $(document).ready(function () {
         navbar.removeClass("scrollUp");
       }
       c = currentScrollTop;
-
-      $('wave').pause();
   });
   
 });
