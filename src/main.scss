@@ -55,7 +55,7 @@ a {
   font-weight: 300;
   font-size: 1.2em;
   text-align: center;
-  color: #1D6297;
+  color: #10417d;
   width: 100%;
   margin-bottom: 0;
 
@@ -64,7 +64,7 @@ a {
 .landing h1 {
   font-size: 4em;
   text-align: center;
-  color: #1D6297;
+  color: #10417d;
   font-weight: 700;
   letter-spacing: -3%;
   margin-top: 0;
@@ -75,7 +75,7 @@ a {
   font-size: 1.4em;
   font-weight: 300;
   text-align: center;
-  color: #1D6297;
+  color: #10417d;
   margin-top: 3em;
 }
 
@@ -89,7 +89,7 @@ a {
 
 }
 
-.grid .icons {
+.icons {
   grid-row: span 1;
   display: flex;
   flex-flow: row wrap;
@@ -118,6 +118,46 @@ a {
   margin: 0.25em;
 }
 
+footer .icons a {
+  font-size: 2em;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 0.25em;
+  color: #10417d;
+}
+
+footer .icons a span {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 0.3333em;
+  width: 100%;
+  margin-top: 0.5em;
+}
+
+footer ul {
+  list-style: none;
+  padding-inline-start: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+footer ul li {
+  margin: 0.25em 1em;
+}
+
+@media only screen and (max-width: 768px) {
+  footer ul li {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+}
+
+
 
 .grid a span {
   font-family: 'Raleway', sans-serif;
@@ -136,6 +176,14 @@ a {
 
   .grid a span {
     display: none;
+  }
+
+ 
+}
+
+@media only screen and (max-width:400px) {
+   .grid h2 {
+    margin: 1em 0;
   }
 }
 
@@ -233,7 +281,7 @@ a {
 
 }
 
-nav {
+header {
   background: #fff;
   height: 80px;
   line-height: 80px;
@@ -245,30 +293,30 @@ nav {
   z-index: 9998;
   transition: all 0.5s;
 }
-nav.scrollUp {
+header.scrollUp {
   transform: translateY(-80px);
 }
-nav ul.navbar-menu {
+header ul.navbar-menu {
   margin: 0;
   padding: 0;
   display: inline-block;
   float: right;
 }
-nav ul.navbar-menu li {
+header ul.navbar-menu li {
   display: inline-block;
   margin: 0 10px;
 }
-nav ul.navbar-menu li a {
+header ul.navbar-menu li a {
   color: #666;
   font-size: 14px;
 }
-nav a#brand {
+header a#brand {
   text-transform: uppercase;
   float: left;
   font-weight: 800;
   font-size: 20px;
 }
-nav button {
+header button {
   background: none;
   width: 30px;
   height: 40px;
@@ -279,7 +327,7 @@ nav button {
   cursor: pointer;
   display: none;
 }
-nav button span {
+header button span {
   width: 30px;
   height: 40px;
   height: 2px;
@@ -289,11 +337,11 @@ nav button span {
 }
 
 @media (max-width: 768px) {
-  nav ul.navbar-menu {
+  header ul.navbar-menu {
     display: none;
   }
 
-  nav button {
+  header button {
     display: block;
   }
 }

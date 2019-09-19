@@ -3,7 +3,7 @@ $(document).ready(function () {
   'use strict';
   
    var c, currentScrollTop = 0,
-       navbar = $('nav');
+       navbar = $('header');
 
    $(window).scroll(function () {
 
