@@ -7,7 +7,7 @@ $(document).ready(function () {
 
    $(window).scroll(function () {
 
-    var element = document.getElementById("chevron-down");
+    var element = document.getElementById("chevron-container");
     element.classList.add("scrolled");
 
       var a = $(window).scrollTop();

@@ -35,6 +35,10 @@ a {
   min-height: 100vh;
 }
 
+.about .flex-wrapper {
+  padding-bottom: 10%;
+}
+
 .landing {
   height: 70vh;
 }
@@ -321,23 +325,32 @@ footer ul li {
 }
 
 .fa-chevron-down {
-  width: 100%;
-  text-align: center;
-  height: 16vh;
   font-size: 2em;
-  line-height: 16vh !important;
-  text-decoration: none;
-  color: inherit;
+}
+
+.chevron-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 16vh;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 70, 0.8)), to(rgba(255, 255, 255, 0)));
   background: linear-gradient(to top, rgba(0, 0, 70, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
-.fa-chevron-down.scrolled {
+.chevron-container.scrolled {
   background: none;
   height: 0;
   overflow: hidden;
-  -webkit-transition: all 0.6s;
-  transition: all 0.6s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  opacity: 0;
 }
 
 .grid {
@@ -373,7 +386,6 @@ header ul.navbar-menu {
   margin: 0;
   padding: 0;
   display: inline-block;
-  float: right;
 }
 
 header ul.navbar-menu li {
@@ -399,7 +411,6 @@ header button {
   height: 40px;
   margin-top: 20px;
   border: none;
-  float: right;
   display: inline-block;
   cursor: pointer;
   display: none;
