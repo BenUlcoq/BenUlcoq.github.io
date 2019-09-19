@@ -416,12 +416,12 @@ header.scrollUp {
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
   color: white;
-  position: absolute;
+  position: relative;
   left: calc(100vw - 60px);
   top: 0;
   margin: 0.5em;
-  -webkit-transition: width 300ms, height 300ms;
-  transition: width 300ms, height 300ms;
+  -webkit-transition: width 200ms, height 200ms, left 200ms, top 0ms;
+  transition: width 200ms, height 200ms, left 200ms, top 0ms;
 }
 
 .mobile-nav .fa-times {
@@ -448,11 +448,11 @@ header.scrollUp {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   position: absolute;
-  right: 47%;
+  right: 48%;
   top: 51%;
   font-size: 1.2em;
 }
@@ -465,8 +465,6 @@ header.scrollUp {
 .mobile-nav.clicked {
   width: 475px;
   height: 475px;
-  -webkit-transition: width 300ms, height 300ms;
-  transition: width 300ms, height 300ms;
   left: calc(100vw - 275px);
   top: unset;
 }

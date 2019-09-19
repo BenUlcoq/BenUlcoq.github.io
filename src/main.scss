@@ -368,12 +368,12 @@ header.scrollUp {
   overflow: hidden;
   flex-flow: column nowrap;
   color: white;
-  position: absolute;
+  position: relative;
   left: calc(100vw - 60px);
   top: 0;
   margin: 0.5em;
   // transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
-  transition: width 300ms, height 300ms;
+  transition: width 200ms, height 200ms, left 200ms, top 0ms;
 
   .fa-times {
     display: none;
@@ -392,9 +392,9 @@ header.scrollUp {
     display: flex;
     flex-flow: column;
     justify-content: flex-end;
-    align-items: center;
+    align-items: flex-end;
     position: absolute;
-    right: 47%;
+    right: 48%;
     top: 51%;
     font-size: 1.2em;
     
@@ -410,8 +410,6 @@ header.scrollUp {
 .mobile-nav.clicked {
   width: 475px;
   height: 475px;
-  // transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
-  transition: width 300ms, height 300ms;
   left: calc(100vw - 275px);
   top: unset;
 }
