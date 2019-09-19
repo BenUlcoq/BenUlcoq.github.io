@@ -33,6 +33,7 @@ $(function() {
     $('.overlay').toggleClass('on');
     $('header').toggle();
     $('footer').toggle();
+    $(this).siblings('h2').toggleClass('hidden');
 
 
   })

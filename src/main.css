@@ -469,24 +469,22 @@ header.scrollUp {
   top: unset;
 }
 
-.overlay {
-  position: absolute;
+.projects-wrapper > h2 {
   width: 100%;
-  height: 100%;
-  z-index: -1;
-  opacity: 0;
-  background-color: white;
-  top: 0;
-  left: 0;
-  -webkit-transition: opacity 1s;
-  transition: opacity 1s;
+  text-align: center;
+  line-height: 1;
+  margin-top: 3em;
+  margin-bottom: 0.5em;
+  -webkit-transition: line-height 200ms, opacity 200ms, margin 200ms;
+  transition: line-height 200ms, opacity 200ms, margin 200ms;
 }
 
-.overlay.on {
-  opacity: 0.95;
-  z-index: 11000;
-  -webkit-transition: opacity 1s;
-  transition: opacity 1s;
+.projects-wrapper > h2.hidden {
+  line-height: 0;
+  opacity: 0;
+  margin: 0;
+  -webkit-transition: line-height 200ms, opacity 200ms, margin 200ms;
+  transition: line-height 200ms, opacity 200ms, margin 200ms;
 }
 
 .projects-wrapper {
@@ -509,15 +507,14 @@ header.scrollUp {
 }
 
 .card:hover {
-  opacity: 0.9;
-}
-
-.card.open:hover {
-  opacity: 1;
+  border-color: white;
+  -webkit-transition: border-color 200ms;
+  transition: border-color 200ms;
 }
 
 .card {
   background-color: white;
+  border-bottom: 5px solid black;
   margin: 1em;
   width: 300px;
   height: 200px;
@@ -526,10 +523,10 @@ header.scrollUp {
   overflow: hidden;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  -webkit-transition: width 275ms 175ms, height 800ms, border-radius 375ms, margin 1s, -webkit-transform 150ms 275ms;
-  transition: width 275ms 175ms, height 800ms, border-radius 375ms, margin 1s, -webkit-transform 150ms 275ms;
-  transition: transform 150ms 275ms, width 275ms 175ms, height 800ms, border-radius 375ms, margin 1s;
-  transition: transform 150ms 275ms, width 275ms 175ms, height 800ms, border-radius 375ms, margin 1s, -webkit-transform 150ms 275ms;
+  -webkit-transition: width 275ms 175ms, height 800ms, border-radius 375ms, margin 1s, border-color 200ms, -webkit-transform 150ms 275ms;
+  transition: width 275ms 175ms, height 800ms, border-radius 375ms, margin 1s, border-color 200ms, -webkit-transform 150ms 275ms;
+  transition: transform 150ms 275ms, width 275ms 175ms, height 800ms, border-radius 375ms, margin 1s, border-color 200ms;
+  transition: transform 150ms 275ms, width 275ms 175ms, height 800ms, border-radius 375ms, margin 1s, border-color 200ms, -webkit-transform 150ms 275ms;
   -webkit-box-shadow: 0 9px 15px rgba(0, 0, 0, 0.5);
           box-shadow: 0 9px 15px rgba(0, 0, 0, 0.5);
   z-index: 1000;
@@ -550,6 +547,14 @@ header.scrollUp {
   background-repeat: no-repeat;
   width: 100%;
   min-height: 200px;
+}
+
+#brisbane {
+  background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(33%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0))), url(brisbane.jpg);
+  background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0.5) 33%, rgba(0, 0, 0, 0) 100%), url(brisbane.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: 60%;
 }
 
 .card .titles {
@@ -584,7 +589,8 @@ header.scrollUp {
 }
 
 .card p {
-  margin: 5%;
+  font-weight: 300;
+  margin: 1em 5%;
 }
 
 .card.hidden {
@@ -597,6 +603,7 @@ header.scrollUp {
 }
 
 .card.open {
+  overflow: scroll;
   width: 100vw;
   height: 100vh;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -621,9 +628,13 @@ header.scrollUp {
   height: 50%;
 }
 
+.card.open .blog-img {
+  height: 50%;
+}
+
 @media only screen and (max-width: 700px) {
   .card {
-    width: 70%;
+    width: 80%;
   }
 }
 
