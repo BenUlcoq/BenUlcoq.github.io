@@ -433,4 +433,228 @@ header button span {
     display: block;
   }
 }
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0;
+  background-color: white;
+  top: 0;
+  left: 0;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.overlay.on {
+  opacity: 0.95;
+  z-index: 11000;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.projects-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  justify-items: center;
+}
+
+.card:hover {
+  opacity: 0.9;
+}
+
+.card.open:hover {
+  opacity: 1;
+}
+
+.card {
+  background-color: white;
+  margin: 1em;
+  width: 300px;
+  height: 200px;
+  cursor: pointer;
+  border-radius: 20px;
+  overflow: hidden;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: width 275ms 175ms, height 800ms, border-radius 375ms, margin 1s, -webkit-transform 150ms 275ms;
+  transition: width 275ms 175ms, height 800ms, border-radius 375ms, margin 1s, -webkit-transform 150ms 275ms;
+  transition: transform 150ms 275ms, width 275ms 175ms, height 800ms, border-radius 375ms, margin 1s;
+  transition: transform 150ms 275ms, width 275ms 175ms, height 800ms, border-radius 375ms, margin 1s, -webkit-transform 150ms 275ms;
+  -webkit-box-shadow: 0 9px 15px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 9px 15px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.card p {
+  line-height: 0;
+  opacity: 0;
+  -webkit-transition: line-height 750ms, opacity 600ms;
+  transition: line-height 750ms, opacity 600ms;
+}
+
+.card .img-overlay {
+  position: relative;
+  background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(33%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0))), url(https://lorempixel.com/400/400);
+  background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0.5) 33%, rgba(0, 0, 0, 0) 100%), url(https://lorempixel.com/400/400);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 200px;
+}
+
+.card .titles {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  color: white;
+  margin-left: 5%;
+}
+
+.card .titles h2 {
+  margin: 0;
+  margin-right: 1em;
+}
+
+.card .titles h3 {
+  margin: 0;
+  margin: 0.5em 0 1em 0;
+  font-weight: 400;
+  font-size: 1em;
+}
+
+.card p {
+  margin: 5%;
+}
+
+.card.hidden {
+  opacity: 0;
+  height: 0;
+  width: 0px;
+  margin: 0;
+  -webkit-transition: opacity 500ms, width 500ms 500ms, height 500ms;
+  transition: opacity 500ms, width 500ms 500ms, height 500ms;
+}
+
+.card.open {
+  width: 100vw;
+  height: 100vh;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: width 475ms 200ms, height 500ms 300ms, border-radius 500ms 375ms, margin 1s, -webkit-transform 150ms;
+  transition: width 475ms 200ms, height 500ms 300ms, border-radius 500ms 375ms, margin 1s, -webkit-transform 150ms;
+  transition: transform 150ms, width 475ms 200ms, height 500ms 300ms, border-radius 500ms 375ms, margin 1s;
+  transition: transform 150ms, width 475ms 200ms, height 500ms 300ms, border-radius 500ms 375ms, margin 1s, -webkit-transform 150ms;
+  z-index: 19000;
+  margin: 0em;
+  border-radius: 0;
+}
+
+.card.open p {
+  line-height: 1;
+  opacity: 1;
+  -webkit-transition: line-height 300ms 675ms, opacity 300ms 675ms;
+  transition: line-height 300ms 675ms, opacity 300ms 675ms;
+}
+
+.card.open .img-overlay {
+  height: 50%;
+}
+
+@media only screen and (max-width: 700px) {
+  .card {
+    width: 70%;
+  }
+}
+
+@-webkit-keyframes card {
+  0% {
+  }
+  20% {
+    position: static;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    width: 200px;
+    height: 300px;
+  }
+  21% {
+    position: absolute;
+    width: 200px;
+    height: 300px;
+  }
+  40% {
+    width: 100vw;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    height: 300px;
+  }
+  60% {
+    height: 600px;
+  }
+  100% {
+    width: 100vw;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    height: 600px;
+    position: absolute;
+  }
+}
+
+@keyframes card {
+  0% {
+  }
+  20% {
+    position: static;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    width: 200px;
+    height: 300px;
+  }
+  21% {
+    position: absolute;
+    width: 200px;
+    height: 300px;
+  }
+  40% {
+    width: 100vw;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    height: 300px;
+  }
+  60% {
+    height: 600px;
+  }
+  100% {
+    width: 100vw;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    height: 600px;
+    position: absolute;
+  }
+}
 /*# sourceMappingURL=main.css.map */

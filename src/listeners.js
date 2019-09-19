@@ -7,8 +7,8 @@ $(document).ready(function () {
 
    $(window).scroll(function () {
 
-    var element = document.getElementById("chevron-container");
-    element.classList.add("scrolled");
+    // var element = document.getElementById("chevron-container");
+    // element.classList.add("scrolled");
 
       var a = $(window).scrollTop();
       var b = navbar.height();
@@ -24,3 +24,17 @@ $(document).ready(function () {
   });
   
 });
+
+$(function() {
+  $('.card').click(function() {
+    $('.card').not(this).removeClass('open')
+    $('.card').not(this).toggleClass('hidden')
+    $(this).toggleClass('open');
+    $('.overlay').toggleClass('on');
+    $('header').toggle();
+    $('footer').toggle();
+
+
+  })
+  
+})
