@@ -3,12 +3,12 @@ $(document).ready(function () {
   'use strict';
   
    var c, currentScrollTop = 0,
-       navbar = $('nav');
+       navbar = $('header');
 
    $(window).scroll(function () {
 
-    var element = document.getElementById("chevron-down");
-    element.classList.add("scrolled");
+    // var element = document.getElementById("chevron-container");
+    // element.classList.add("scrolled");
 
       var a = $(window).scrollTop();
       var b = navbar.height();
@@ -23,4 +23,28 @@ $(document).ready(function () {
       c = currentScrollTop;
   });
   
+});
+
+$(function() {
+  $('.card').click(function() {
+    $('.card').not(this).removeClass('open')
+    $('.card').not(this).toggleClass('hidden')
+    $(this).toggleClass('open');
+    $('.overlay').toggleClass('on');
+    $('header').toggle();
+    $('footer').toggle();
+    $(this).siblings('h2').toggleClass('hidden');
+
+
+  })
+  
+})
+
+$(function() {
+  $('.mobile-nav i').click(function(){
+    // $(this).find('i').toggle('fa-bars fa-times')
+    $('.mobile-nav').find('i').toggle('fa-bars fa-times')
+    $('.mobile-nav').toggleClass('clicked')
+    $('.mobile-nav').find('li').toggle();
+});
 });
