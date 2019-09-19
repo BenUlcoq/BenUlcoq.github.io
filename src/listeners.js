@@ -38,3 +38,12 @@ $(function() {
   })
   
 })
+
+$(function() {
+  $('.mobile-nav i').click(function(){
+    // $(this).find('i').toggle('fa-bars fa-times')
+    $('.mobile-nav').find('i').toggle('fa-bars fa-times')
+    $('.mobile-nav').toggleClass('clicked')
+    $('.mobile-nav').find('li').toggle();
+});
+});

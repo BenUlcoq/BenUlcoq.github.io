@@ -363,18 +363,25 @@ footer ul li {
 }
 
 header {
-  background: #fff;
   height: 80px;
-  line-height: 80px;
-  -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-          box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
   z-index: 9998;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 header.scrollUp {
@@ -382,56 +389,86 @@ header.scrollUp {
           transform: translateY(-80px);
 }
 
-header ul.navbar-menu {
-  margin: 0;
-  padding: 0;
-  display: inline-block;
-}
-
-header ul.navbar-menu li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-header ul.navbar-menu li a {
-  color: #666;
-  font-size: 14px;
-}
-
-header a#brand {
-  text-transform: uppercase;
-  float: left;
-  font-weight: 800;
-  font-size: 20px;
-}
-
-header button {
-  background: none;
-  width: 30px;
-  height: 40px;
-  margin-top: 20px;
-  border: none;
-  display: inline-block;
-  cursor: pointer;
-  display: none;
-}
-
-header button span {
-  width: 30px;
-  height: 40px;
-  height: 2px;
-  background: #333;
-  display: block;
-  margin: 5px 0;
-}
-
 @media (max-width: 768px) {
-  header ul.navbar-menu {
-    display: none;
-  }
   header button {
     display: block;
   }
+}
+
+.mobile-nav {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: -webkit-gradient(linear, left bottom, left top, from(#000046), to(#1cb5e0));
+  background: linear-gradient(to top, #000046 0%, #1cb5e0 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  color: white;
+  position: absolute;
+  left: calc(100vw - 60px);
+  top: 0;
+  margin: 0.5em;
+  -webkit-transition: width 300ms, height 300ms;
+  transition: width 300ms, height 300ms;
+}
+
+.mobile-nav .fa-times {
+  display: none;
+}
+
+.mobile-nav i {
+  position: absolute;
+  font-size: 1.5em;
+  color: white;
+  cursor: pointer;
+}
+
+.mobile-nav ul {
+  list-style: none;
+  color: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  right: 47%;
+  top: 51%;
+  font-size: 1.2em;
+}
+
+.mobile-nav ul li {
+  margin: 0.5em 0;
+  display: none;
+}
+
+.mobile-nav.clicked {
+  width: 475px;
+  height: 475px;
+  -webkit-transition: width 300ms, height 300ms;
+  transition: width 300ms, height 300ms;
+  left: calc(100vw - 275px);
+  top: unset;
 }
 
 .overlay {
