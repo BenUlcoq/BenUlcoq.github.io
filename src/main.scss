@@ -29,11 +29,20 @@ main {
   color: white;
 }
 
+.dark {
+  background: linear-gradient( to top, rgba(0,0,70,1) 0%, rgba(28,181,224,1) 100%);
+  min-height: 100vh;
+}
+
 main.dark {
-  background: linear-gradient( to top, rgba(0,0,70,1) 0%, rgba(15, 65, 125,1 ) 100%);
+  
   padding-top: 100px;
   padding-bottom: 100px;
-  min-height: 100vh;
+
+}
+
+main#contact {
+  padding-top: 0;
 }
 
 
@@ -663,6 +672,10 @@ background-position-y: 60%;
   .blog-img {
     height: 50%;
   }
+
+  .wave {
+    display: none;
+  }
 }
 
 @media only screen and (max-width:770px){
@@ -821,6 +834,16 @@ background-position-y: 60%;
 
 footer .wave {
   transform: scaleY(-1) translateY(99%);
+}
+
+iframe {
+  position: absolute;
+  width: 100%;
+  // overflow: scroll;
+  height: 100vh;
+  border: none;
+  top: 0;
+  z-index: 999999;
 }
 
 
