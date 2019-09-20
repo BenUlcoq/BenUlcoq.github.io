@@ -39,6 +39,7 @@ $(function() {
     $('footer').toggle();
     $('.page-title').toggleClass('hidden');
     $(this).siblings('h2').toggleClass('hidden');
+    
   })
   
 })

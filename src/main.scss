@@ -5,6 +5,11 @@ a:focus {
   outline-offset: .15em;
 }
 
+#open-navmenu:focus {
+  color: red;
+  outline: none;
+}
+
 html {
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -16,6 +21,8 @@ body {
   margin: 0;
 }
 
+
+
 main {
   color: #10417d;
   padding-top: 1em;
@@ -24,6 +31,7 @@ main {
 
 main.dark {
   background: linear-gradient( to top, rgba(0,0,70,1) 0%, rgba(15, 65, 125,1 ) 100%);
+  padding-top: 100px;
   padding-bottom: 100px;
   min-height: 100vh;
 }
@@ -54,8 +62,18 @@ a {
   padding-bottom: 100px;
 }
 
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .landing {
   height: 70vh;
+  animation: fadein 1.5s ease-in;
 }
 
 .landing .flex-wrapper {
@@ -91,7 +109,7 @@ a {
   text-align: center;
   color: #10417d;
   font-weight: 700;
-  letter-spacing: -3%;
+  letter-spacing: -3px;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -121,6 +139,11 @@ a {
   flex-flow: row wrap;
   justify-content: space-evenly;
   width: 100%;
+
+  h3 {
+    width: 100%;
+    text-align: center;
+  }
 }
 .grid h2 {
   font-size: 2.5em;
@@ -322,6 +345,11 @@ header.scrollUp {
   .overlay {
     box-shadow: none;
   }
+
+  .mobile-nav.clicked {
+    transform: translateY(80px);
+    transition: transform 0.5s;
+  }
 }
 // header ul.navbar-menu {
 //   margin: 0;
@@ -394,7 +422,7 @@ header.scrollUp {
   top: 0;
   margin: 0.5em;
   // transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
-  transition: width 200ms, height 200ms, left 200ms, top 0ms;
+  transition: transform 500ms, width 200ms, height 200ms, left 200ms, top 0ms;
   z-index: 200;
   box-shadow: 0px 5px 15px rgba(0,0,70,1);
 
@@ -525,7 +553,7 @@ main.dark.hidden {
   overflow: hidden;
   transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
   transition: transform 150ms, width 275ms 175ms, height 800ms, border-radius 375ms, margin 1s, border-color 200ms;
-  box-shadow: 0 9px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 1);
   z-index: 1000;
 
     p {
@@ -549,6 +577,7 @@ main.dark.hidden {
     url(https://lorempixel.com/400/400);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 
   // overflow: hidden;
   width: 100%;
@@ -602,7 +631,7 @@ background-position-y: 60%;
 
 .card.hidden {
   opacity: 0;
-  height: 0;
+  height: 0px;
   width: 0px;
   margin: 0;
   transition: opacity 500ms, width 500ms 500ms, height 500ms;
@@ -611,7 +640,7 @@ background-position-y: 60%;
 .card.open {
   // order: -1;
   overflow: scroll;
-  width: 100vw;
+  width: 90vw;
   height: 100vh;
   // top: 0;
   // transform: scale(1.2) translateY(0.2);
@@ -637,12 +666,19 @@ background-position-y: 60%;
 }
 
 @media only screen and (max-width:770px){
+
   .card {
     width: 80%;
     height: 40vw;
+  }
+
+  .card:not(.hidden) {
     min-height: 200px;
   }
+
+
 }
+
 
 
 @keyframes card {
@@ -713,8 +749,8 @@ background-position-y: 60%;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  width: 100px;
-  height: 100px;
+  width: 110px;
+  height: 110px;
   
   p {
     width: 100%;
@@ -740,6 +776,21 @@ background-position-y: 60%;
   height: auto;
 }
 
+#more {
+  animation: spin 15s linear infinite;
+}
+
+@keyframes spin {
+  
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(359deg);
+    }
+  
+}
+
 @media only screen and (max-width:515px) {
 
   .grid .heading {
@@ -762,13 +813,7 @@ background-position-y: 60%;
 
     width: 100%;
   
-    .skill-wrapper{
-    width: 60px;
-    height: 60px;
-    }
-  p {
-    display: none;
-  }
+
 }
 
  
