@@ -12,23 +12,26 @@
   <title>Ben Ulcoq - Web Developer</title>
 </head>
 <body>
-      <header class="scrollUp">
-            <div class="mobile-nav">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-times"></i>
-            <ul class="navbar-menu">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Projects</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </div>
-        </header>
+    <header class="scrollUp">
+        <div class="logo"></div>
+        <div class="mobile-nav">
+            <a href="javascript:;" id="open-navmenu" tabindex="0" class="fas fa-bars"></a>
+            <a href="javascript:;" id="close-navmenu" tabindex="0" class="fas fa-times"></a>
+        <ul class="navbar-menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="overlay"></div>
+    </header>
   
-  <main>
+  <main class="dark">
+    <h1 class="page-title">Projects</h1>
     <section class="projects-wrapper">
 
-      <h2>Development Projects</h2>
+      <h2>Development</h2>
         <article class="card wrapper">
           <div class="img-overlay">
             <div class="titles">
@@ -43,7 +46,7 @@
                 </p>
           </article>
 
-          <h2>Design Projects</h2>
+          <h2>Design</h2>
           <article class="card wrapper">
               <div class="img-overlay">
                 <div class="titles">
@@ -91,6 +94,7 @@
   </section>
     </main>
     <footer>
+        <div class="wave"></div>
         <img class="logo"></img>
         <nav><ul class="footer-menu">
           <li><a href="#">page a</a></li>
