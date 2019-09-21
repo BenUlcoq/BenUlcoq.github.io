@@ -5,27 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" type="text/css" href ="./main.css">
-  <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa:400|Raleway:300,400,700&display=swap" rel="stylesheet">
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
   <script type="text/javascript" src="listeners.js"></script>
   <script src="https://kit.fontawesome.com/0ea72c9220.js"></script>
   <title>Ben Ulcoq - Web Developer</title>
 </head>
 <body>
-      <header class="scrollUp">
-            <div class="logo"></div>
-            <div class="mobile-nav">
-                <a href="javascript:;" id="open-navmenu" class="fas fa-bars"></a>
-            <a href="javascript:;" id="close-navmenu" class="fas fa-times"></a>
-            <ul class="navbar-menu">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Projects</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </div>
-          <div class="overlay"></div>
-        </header>
+    <header class="scrollUp">
+        <a href="index.html">
+        <div class="logo-container">
+          <img class="logo" src="Logo-blue.svg"></img>
+          <h2>b<span>en ulco</span>q</h2>
+        </div>
+      </a>
+          <div class="mobile-nav">
+              <a href="javascript:;" id="open-navmenu" tabindex="0" class="fas fa-bars"></a>
+              <a href="javascript:;" id="close-navmenu" tabindex="0" class="fas fa-times"></a>
+          <ul class="navbar-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="overlay">
+            <div class="wave"></div>
+        </div>
+      </header>
         <div class="wave"></div>
   <main class="dark">
     <h1 class="page-title">Blog</h1>
@@ -52,7 +59,6 @@
                   <div class="wave"></div>
                 <div class="titles">
                   <h2 class="project-title">Coding Bootcamps, Meetups and .. Twitter?</h2>
-                    <h3 class="project-subtitle">Diving Head-First into the Brisbane Tech Scene</h3>
                     <span>Published 21st September</span>
                   </div>
                   </div>
@@ -105,12 +111,12 @@
     </main>
     <footer>
         <div class="wave"></div>
-        <img class="logo"></img>
+        <img class="logo" src="Logo-blue.svg"></img>
         <nav><ul class="footer-menu">
-          <li><a href="#">page a</a></li>
-          <li><a href="#">page b</a></li>
-          <li><a href="#">page c</a></li>
-          <li><a href="#">page d</a></li>
+            <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul></nav>
         <nav class="icons">
             <a href="linkedin.com" class="fab fa-linkedin fa-fw"><span>LinkedIn</span></a>
@@ -119,9 +125,9 @@
             <a href="medium.com" class="fab fa-medium fa-fw"><span>Medium</span></a>
         </nav>
     </footer>
-    <iframe src="contact.html" sandbox="allow-same-origin allow-scripts allow-forms">
+    <!-- <iframe src="contact.html" sandbox="allow-same-origin allow-scripts allow-forms">
 
 
-    </iframe>
+    </iframe> -->
   </body>
   </html>

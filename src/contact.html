@@ -5,15 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" type="text/css" href ="./main.css">
-  <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa:400|Raleway:300,400,700&display=swap" rel="stylesheet">
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
   <script type="text/javascript" src="listeners.js"></script>
   <script src="https://kit.fontawesome.com/0ea72c9220.js"></script>
   <title>Ben Ulcoq - Web Developer</title>
 </head>
 <body class="dark">
+    <header class="scrollUp">
+        <a href="index.html">
+        <div class="logo-container">
+          <img class="logo" src="Logo-blue.svg"></img>
+          <h2>b<span>en ulco</span>q</h2>
+        </div>
+      </a>
+          <div class="mobile-nav">
+              <a href="javascript:;" id="open-navmenu" tabindex="0" class="fas fa-bars"></a>
+              <a href="javascript:;" id="close-navmenu" tabindex="0" class="fas fa-times"></a>
+          <ul class="navbar-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="overlay">
+            <div class="wave"></div>
+        </div>
+      </header>
     <div class="wave"></div>
-  <main id="contact">
+  <main class="dark" id="contact">
     <h1>Get in touch.</h1>
     <p>If you're looking for a developer or just want to say hi, use the form below to send me a message!</p>
   
@@ -23,5 +44,21 @@
       <textarea label="message" name="message" placeholder="What's on your mind?"></textarea>
   
 </main>
+<footer>
+    <div class="wave"></div>
+    <img class="logo" src="Logo-blue.svg"></img>
+    <nav><ul class="footer-menu">
+        <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+    </ul></nav>
+    <nav class="icons">
+        <a href="linkedin.com" class="fab fa-linkedin fa-fw"><span>LinkedIn</span></a>
+        <a href="github.com" class="fab fa-github-square fa-fw"><span>Github</span></a>
+        <a href="twitter.com" class="fab fa-twitter-square fa-fw"><span>Twitter</span></a>
+        <a href="medium.com" class="fab fa-medium fa-fw"><span>Medium</span></a>
+    </nav>
+</footer>
 </body>
 </html>

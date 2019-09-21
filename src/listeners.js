@@ -18,6 +18,7 @@ $(document).ready(function () {
       currentScrollTop = a;
      
       if (c < currentScrollTop && a > b + b) {
+        navbar.css("display","flex");
         navbar.addClass("scrollUp");
       } else if (c > currentScrollTop && !(a <= b)) {
         navbar.removeClass("scrollUp");
@@ -29,7 +30,7 @@ $(document).ready(function () {
 
 $(function() {
   $('.card').click(function() {
-    $(this).css("transform","scale(1)");
+    // $(this).css("transform","scale(1)");
     $('.dark').toggleClass('hidden')
     $('.projects-wrapper').toggleClass('hidden')
     $('.card').not(this).removeClass('open')
@@ -44,18 +45,6 @@ $(function() {
   
 })
 
-$("#open-navmenu").keyup(function(event) {
-  if (event.keyCode === 13) {
-      $("#id_of_button").click();
-  }
-});
-
-$("#close-navmenu").keyup(function(event) {
-  if (event.keyCode === 13) {
-      $("#id_of_button").click();
-  }
-});
-
 
 $(function() {
   $('#open-navmenu').click(function(){
@@ -65,6 +54,7 @@ $(function() {
     $('.mobile-nav').toggleClass('clicked');
     $('.mobile-nav').find('li').toggle();
 });
+
 
 
 $(function() {

@@ -8,6 +8,11 @@ a:focus {
   outline: none;
 }
 
+header > a:focus {
+  outline: none;
+  opacity: 0.6;
+}
+
 html {
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -37,12 +42,12 @@ main.dark {
 }
 
 main#contact {
-  padding-top: 0;
+  background: none;
 }
 
 main > h1 {
   text-align: center;
-  margin: 2em auto 0 auto;
+  margin: 3em auto 0 auto;
 }
 
 a {
@@ -202,6 +207,10 @@ a {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 0.25em;
+}
+
+footer {
+  background: white;
 }
 
 footer .icons a {
@@ -412,6 +421,10 @@ footer ul li {
   place-content: stretch;
 }
 
+.homepage header {
+  display: none;
+}
+
 header {
   height: 80px;
   position: fixed;
@@ -435,8 +448,8 @@ header {
 }
 
 header.scrollUp {
-  -webkit-transform: translateY(-80px);
-          transform: translateY(-80px);
+  -webkit-transform: translateY(-180px);
+          transform: translateY(-180px);
 }
 
 header.scrollUp .overlay {
@@ -451,6 +464,103 @@ header.scrollUp .mobile-nav.clicked {
   transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
   transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+header > a {
+  position: absolute;
+  left: 0;
+  z-index: 101;
+}
+
+header .logo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 20px;
+}
+
+header .logo-container h2 {
+  letter-spacing: -43px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  opacity: 0;
+  font-size: 3.4em;
+  font-family: 'Comfortaa', sans-serif;
+  margin: 0;
+  font-weight: 400;
+  -webkit-transition: opacity 0.2s 0.2s;
+  transition: opacity 0.2s 0.2s;
+  color: #10417d;
+  white-space: nowrap;
+}
+
+header .logo-container span {
+  letter-spacing: -0.53em;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s, letter-spacing 0.3s;
+  transition: opacity 0.3s, letter-spacing 0.3s;
+}
+
+header .logo-container:hover h2 {
+  opacity: 1;
+  letter-spacing: -4px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+header .logo-container:hover span {
+  letter-spacing: -4px;
+  opacity: 1;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+header .logo-container:hover .logo {
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+header .logo {
+  height: 3.5em;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  margin-left: 4px;
+  margin-top: 5px;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s 0.1s;
+  transition: opacity 0.3s 0.1s;
+}
+
+header .overlay {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background-color: white;
+  z-index: 100;
+  -webkit-transition: -webkit-box-shadow 0.5s;
+  transition: -webkit-box-shadow 0.5s;
+  transition: box-shadow 0.5s;
+  transition: box-shadow 0.5s, -webkit-box-shadow 0.5s;
+  -webkit-filter: drop-shadow(0px 5px 5px rgba(0, 0, 70, 0.1));
+          filter: drop-shadow(0px 5px 5px rgba(0, 0, 70, 0.1));
+}
+
+header .overlay .wave {
+  top: 99%;
 }
 
 .mobile-nav {
@@ -482,8 +592,8 @@ header.scrollUp .mobile-nav.clicked {
   transition: transform 500ms, width 200ms, height 200ms, left 200ms, top 0ms;
   transition: transform 500ms, width 200ms, height 200ms, left 200ms, top 0ms, -webkit-transform 500ms;
   z-index: 200;
-  -webkit-box-shadow: 0px 5px 15px #000046;
-          box-shadow: 0px 5px 15px #000046;
+  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 70, 0.5);
+          box-shadow: 0px 4px 8px rgba(0, 0, 70, 0.5);
 }
 
 .mobile-nav .fa-times {
@@ -527,9 +637,14 @@ header.scrollUp .mobile-nav.clicked {
 .mobile-nav.clicked {
   width: 475px;
   height: 475px;
-  left: calc(100vw - 275px);
+  left: calc(100vw - 277px);
   top: unset;
 }
+
+.mobile-nav:not(.clicked):hover {
+ transform: scale(1.1);
+}
+
 
 .page-title {
   -webkit-transition: line-height 200ms, opacity 200ms, margin 200ms;
@@ -595,8 +710,13 @@ main.dark.hidden {
 }
 
 .card:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.1) rotate(1deg);
+          transform: scale(1.1) rotate(1deg);
+}
+
+.card:nth-of-type(2):hover {
+  -webkit-transform: scale(1.1) rotate(-1deg);
+          transform: scale(1.1) rotate(-1deg);
 }
 
 .card.open:hover {
@@ -627,8 +747,9 @@ main.dark.hidden {
 .card p {
   line-height: 0;
   opacity: 0;
-  -webkit-transition: line-height 750ms, opacity 600ms;
-  transition: line-height 750ms, opacity 600ms;
+  height: 0;
+  -webkit-transition: line-height 750ms, opacity 600ms, height 0ms 750ms;
+  transition: line-height 750ms, opacity 600ms, height 0ms 750ms;
 }
 
 .card .wave {
@@ -645,6 +766,12 @@ main.dark.hidden {
   background-position: center;
   width: 100%;
   height: 100%;
+  -webkit-transition: height 500ms 400ms;
+  transition: height 500ms 400ms;
+}
+
+.card .img-overlay span {
+  margin: 0.5em 0;
 }
 
 #brisbane {
@@ -697,32 +824,45 @@ main.dark.hidden {
   height: 0px;
   width: 0px;
   margin: 0;
-  -webkit-transition: opacity 500ms, width 500ms 500ms, height 500ms;
-  transition: opacity 500ms, width 500ms 500ms, height 500ms;
+  -webkit-transition: opacity 500ms, width 500ms, height 500ms;
+  transition: opacity 500ms, width 500ms, height 500ms;
+}
+
+.wave-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .card.open {
   overflow: scroll;
   width: 90vw;
-  height: 100vh;
+  height: 90vh;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  -webkit-transition: width 475ms 200ms, height 500ms 300ms, border-radius 500ms 375ms, margin 1s, -webkit-transform 150ms;
-  transition: width 475ms 200ms, height 500ms 300ms, border-radius 500ms 375ms, margin 1s, -webkit-transform 150ms;
-  transition: transform 150ms, width 475ms 200ms, height 500ms 300ms, border-radius 500ms 375ms, margin 1s;
-  transition: transform 150ms, width 475ms 200ms, height 500ms 300ms, border-radius 500ms 375ms, margin 1s, -webkit-transform 150ms;
+  -webkit-transition: width 500ms, height 500ms 300ms, margin 1s, -webkit-transform 150ms;
+  transition: width 500ms, height 500ms 300ms, margin 1s, -webkit-transform 150ms;
+  transition: transform 150ms, width 500ms, height 500ms 300ms, margin 1s;
+  transition: transform 150ms, width 500ms, height 500ms 300ms, margin 1s, -webkit-transform 150ms;
   z-index: 19000;
+  margin-top: 5vh;
 }
 
 .card.open p {
   line-height: 1;
   opacity: 1;
-  -webkit-transition: line-height 300ms 675ms, opacity 300ms 675ms;
-  transition: line-height 300ms 675ms, opacity 300ms 675ms;
+  height: auto;
+  -webkit-transition: line-height 300ms 675ms, opacity 300ms 675ms, height 300ms 675ms;
+  transition: line-height 300ms 675ms, opacity 300ms 675ms, height 300ms 675ms;
+  display: block;
 }
 
 .card.open .img-overlay {
   height: 50%;
+  -webkit-transition: height 300ms 300ms;
+  transition: height 300ms 300ms;
 }
 
 .card.open .blog-img {
