@@ -26,7 +26,9 @@ body {
   margin: 0;
 }
 
-
+p {
+  line-height: 1em;
+}
 
 main {
   color: #10417d;
@@ -515,7 +517,7 @@ header .overlay {
   justify-content: center;
   overflow: hidden;
   flex-flow: column nowrap;
-  color: #000046;
+  color: #10417d;
   position: relative;
   left: calc(100vw - 60px);
   top: 0;
@@ -532,7 +534,7 @@ header .overlay {
   > a {
     position: absolute;
     font-size: 1.5em;
-    color: #000046;
+    color: #10417d;
     cursor: pointer;
   }
 
@@ -766,7 +768,7 @@ background-position-y: 60%;
   // border-radius: 0;
   // position: absolute;
   p {
-    line-height: 1;
+    line-height: 1.4;
     opacity: 1;
     height: auto;
     transition: line-height 300ms 675ms, opacity 300ms 675ms, height 300ms 675ms;
@@ -1021,7 +1023,7 @@ footer .wave {
     max-width: 100%;
     flex-grow: 1;
     flex-shrink: 1;
-    margin: 1em auto;
+    margin: 0 auto 1.5em auto;
   }
 }
 
@@ -1104,6 +1106,86 @@ iframe {
   transition: all 0.5s;
   opacity: 0;
 
+
+}
+
+#terminal-application {
+  background: 
+  linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 33%, rgba(0,0,0,0) 100%),
+    url(/src/Projects/Poker.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+#Driftwood-cards {
+  background: 
+  linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 33%, rgba(0,0,0,0) 100%),
+    url(/src/Projects/driftwood.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+#FFC-whales {
+  background: 
+  linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 33%, rgba(0,0,0,0) 100%),
+    url(/src/Projects/ffc-whales.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+#Diamond-Z {
+  background: 
+  linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 33%, rgba(0,0,0,0) 100%),
+    url(/src/Projects/diamondz.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+#CQG-banners {
+  background: 
+  linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 33%, rgba(0,0,0,0) 100%),
+    url(/src/Projects/cqg-banners.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+#Gateway-brochure {
+  background: 
+  linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 33%, rgba(0,0,0,0) 100%),
+    url(/src/Projects/gateway.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+#Synclift-cap {
+  background: 
+  linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 33%, rgba(0,0,0,0) 100%),
+    url(/src/Projects/synclift.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+#portfolio {
+  background: 
+  linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 33%, rgba(0,0,0,0) 100%),
+    url(/src/Projects/Portfolio.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 
 }
 
