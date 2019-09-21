@@ -12,7 +12,7 @@
   <title>Ben Ulcoq - Web Developer</title>
 </head>
 <body class="dark">
-    <header class="scrollUp">
+    <header>
         <a href="index.html">
         <div class="logo-container">
           <img class="logo" src="Logo-blue.svg"></img>
@@ -35,14 +35,18 @@
       </header>
     <div class="wave"></div>
   <main class="dark" id="contact">
+
     <h1>Get in touch.</h1>
+  <form class="contact-form">
     <p>If you're looking for a developer or just want to say hi, use the form below to send me a message!</p>
-  
-  
-      <input label="Name" name="name" type="text" placeholder="John Doe">
-      <input label="Email" name="email" type="text" placeholder="john.doe@gmail.com">
-      <textarea label="message" name="message" placeholder="What's on your mind?"></textarea>
-  
+    <label for="name">Name</label>
+    <input name="name" type="text" placeholder="John Doe" required>
+    <label for="email">Email</label>
+      <input label="Email" name="email" type="text" placeholder="john.doe@gmail.com" required>
+      <label for="message">Message</label>
+      <textarea label="message" name="message" placeholder="What's on your mind?" required></textarea>
+      <input type="submit">
+  </form>
 </main>
 <footer>
     <div class="wave"></div>

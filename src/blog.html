@@ -12,7 +12,7 @@
   <title>Ben Ulcoq - Web Developer</title>
 </head>
 <body>
-    <header class="scrollUp">
+    <header>
         <a href="index.html">
         <div class="logo-container">
           <img class="logo" src="Logo-blue.svg"></img>
@@ -26,7 +26,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a id="open-popup" href="javascript:;">Contact</a></li>
           </ul>
         </div>
         <div class="overlay">
@@ -125,9 +125,11 @@
             <a href="medium.com" class="fab fa-medium fa-fw"><span>Medium</span></a>
         </nav>
     </footer>
-    <!-- <iframe src="contact.html" sandbox="allow-same-origin allow-scripts allow-forms">
-
-
-    </iframe> -->
+    <div class="popup overlay">
+        <a href="javascript:;" id="close-popup" tabindex="0" class="fas fa-times"></a>
+        <div class="popup wave"></div>
+    </div>
+    <iframe class="popup" src="contact.html" sandbox="allow-same-origin allow-scripts allow-forms">
+    </iframe>
   </body>
   </html>
