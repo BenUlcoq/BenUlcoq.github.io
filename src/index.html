@@ -26,7 +26,7 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a id="open-popup" href="javascript:;">Contact</a></li>
         </ul>
       </div>
       <div class="overlay">
@@ -106,7 +106,12 @@
           <a href="github.com" class="fab fa-github-square fa-fw"><span>Github</span></a>
           <a href="twitter.com" class="fab fa-twitter-square fa-fw"><span>Twitter</span></a>
       </nav>
-      
   </footer>
+  <div class="popup overlay hidden">
+      <a href="javascript:;" id="close-popup" tabindex="0" class="fas fa-times"></a>
+      <div class="popup wave hidden"></div>
+  </div>
+  <iframe class="popup hidden" src="contact.html" sandbox="allow-same-origin allow-scripts allow-forms">
+  </iframe>
 </body>
 </html>
