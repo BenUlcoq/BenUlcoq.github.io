@@ -3,6 +3,12 @@ a:focus {
   outline-offset: .15em;
 }
 
+a:hover {
+  opacity: 0.6;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
 #open-navmenu:focus {
   color: red;
   outline: none;
@@ -219,6 +225,87 @@ a {
 
 footer {
   background: white;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  color: #10417d;
+}
+
+footer nav {
+  height: 100%;
+  -ms-flex-preferred-size: 200px;
+      flex-basis: 200px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1.5em auto;
+}
+
+footer nav .fab {
+  width: auto;
+}
+
+footer .logo {
+  height: 80px;
+  width: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+footer #logo {
+  -ms-flex-preferred-size: 200px;
+      flex-basis: 200px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin: 1.5em auto;
+  text-align: center;
+}
+
+.footer-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 80%;
+  margin: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  width: auto;
+  height: 100%;
+  justify-items: center;
+  -ms-flex-preferred-size: 200px;
+      flex-basis: 200px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 footer .icons a {
@@ -228,24 +315,24 @@ footer .icons a {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+      -ms-flex-flow: row;
+          flex-flow: row;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   margin: 0.25em;
   color: #10417d;
+  text-align: left;
 }
 
 footer .icons a span {
   font-family: 'Raleway', sans-serif;
   font-weight: 500;
-  font-size: 0.3333em;
-  width: 100%;
-  margin-top: 0.5em;
+  font-size: 0.44em;
+  margin-left: 0.5em;
 }
 
 footer ul {
@@ -255,28 +342,29 @@ footer ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+      -ms-flex-flow: column;
+          flex-flow: column;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  font-size: 0.9em;
+  height: 100%;
+  margin: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 footer ul li {
   margin: 0.25em 1em;
 }
 
-@media only screen and (max-width: 768px) {
-  footer ul li {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    width: 100%;
+@media only screen and (max-width: 750px) {
+  footer #logo {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
   }
 }
 
@@ -300,6 +388,9 @@ footer ul li {
 
 .grid p {
   grid-row: span 1;
+  line-height: 1.4;
+  margin: 0;
+  justify-self: flex-start;
 }
 
 .border {
@@ -717,7 +808,7 @@ main.dark.hidden {
           transform: scale(1.1) rotate(1deg);
 }
 
-.card:nth-of-type(2):hover {
+.card:nth-of-type(even):hover {
   -webkit-transform: scale(1.1) rotate(-1deg);
           transform: scale(1.1) rotate(-1deg);
 }
@@ -753,6 +844,11 @@ main.dark.hidden {
   height: 0;
   -webkit-transition: line-height 750ms, opacity 600ms, height 0ms 750ms;
   transition: line-height 750ms, opacity 600ms, height 0ms 750ms;
+}
+
+.card p span {
+  line-height: 1.4;
+  font-size: 0.8em;
 }
 
 .card .wave {
@@ -970,6 +1066,7 @@ main.dark.hidden {
   font-size: 1.8em;
   width: 100%;
   text-align: center;
+  margin: 1em auto 0 auto;
 }
 
 .skillset h3 {
@@ -1233,6 +1330,8 @@ footer .wave {
   top: 50vh;
   left: 50vw;
   margin-left: -40%;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
 }
 
 .popup.overlay .wave {
@@ -1337,6 +1436,46 @@ iframe footer {
 #portfolio {
   background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(33%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0))), url(/src/Projects/Portfolio.jpg);
   background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0.5) 33%, rgba(0, 0, 0, 0) 100%), url(/src/Projects/Portfolio.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#motivation {
+  background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(33%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0))), url(/src/motivation.jpg);
+  background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0.5) 33%, rgba(0, 0, 0, 0) 100%), url(/src/motivation.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#practice {
+  background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(33%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0))), url(/src/practice.jpg);
+  background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0.5) 33%, rgba(0, 0, 0, 0) 100%), url(/src/practice.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#coding {
+  background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(33%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0))), url(/src/coding.jpg);
+  background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0.5) 33%, rgba(0, 0, 0, 0) 100%), url(/src/coding.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#designing {
+  background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(33%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0))), url(/src/designing.jpg);
+  background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0.5) 33%, rgba(0, 0, 0, 0) 100%), url(/src/designing.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#celebrate {
+  background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(33%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0))), url(/src/celebrate.jpg);
+  background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0.5) 33%, rgba(0, 0, 0, 0) 100%), url(/src/celebrate.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

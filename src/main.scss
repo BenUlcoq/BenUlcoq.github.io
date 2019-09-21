@@ -5,6 +5,11 @@ a:focus {
   outline-offset: .15em;
 }
 
+a:hover {
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
 #open-navmenu:focus {
   color: red;
   outline: none;
@@ -189,46 +194,103 @@ a {
 
 footer {
   background: white;
+  height: 200px;
+  display: flex;
+  position: relative;
+  color: #10417d;
+}
+
+footer nav {
+  height: 100%;
+  flex-basis: 200px;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5em auto;
+
+  .fab {
+    width: auto;
+  }
+}
+
+footer .logo {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+}
+
+
+
+footer #logo {
+  flex-basis: 200px;
+  flex-grow: 1;
+  margin: 1.5em auto;
+  text-align: center;
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  width: 80%;
+  margin: auto;
+  align-items: center;
+}
+
+footer .icons {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  width: auto;
+  height: 100%;
+  justify-items: center;
+  flex-basis: 200px;
+  flex-grow: 1;
 }
 
 footer .icons a {
   font-size: 2em;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   margin: 0.25em;
   color: #10417d;
+  text-align: left;
 }
 
 footer .icons a span {
   font-family: 'Raleway', sans-serif;
   font-weight: 500;
-  font-size: 0.3333em;
-  width: 100%;
-  margin-top: 0.5em;
+  font-size: 0.44em;
+  margin-left: 0.5em;
 }
 
 footer ul {
   list-style: none;
   padding-inline-start: 0;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column;
   justify-content: space-evenly;
+  font-size: 0.9em;
+  height: 100%;
+  margin: 0;
+  align-items: center;
 }
 
 footer ul li {
   margin: 0.25em 1em;
 }
 
-@media only screen and (max-width: 768px) {
-  footer ul li {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+@media only screen and (max-width:750px) {
+
+  footer #logo {
+    flex-basis: 100%;
   }
   
 }
+
+
 
 
 
@@ -255,6 +317,9 @@ footer ul li {
 
 .grid p {
   grid-row: span 1;
+  line-height: 1.4;
+  margin: 0;
+  justify-self: flex-start;
 }
  
 .border { 
@@ -638,7 +703,7 @@ main.dark.hidden {
 .card:hover {
   transform: scale(1.1) rotate(1deg); 
 }
-.card:nth-of-type(2):hover {
+.card:nth-of-type(even):hover {
   transform: scale(1.1) rotate(-1deg); 
 }
 
@@ -666,6 +731,11 @@ main.dark.hidden {
       opacity: 0;
       height: 0;
       transition: line-height 750ms, opacity 600ms, height 0ms 750ms;
+
+      span {
+        line-height: 1.4;
+        font-size: 0.8em;
+      }
 
     }
 
@@ -851,6 +921,7 @@ background-position-y: 60%;
     font-size: 1.8em;
     width: 100%;
     text-align: center;
+    margin: 1em auto 0 auto;
   }
 
   h3 {
@@ -1061,6 +1132,7 @@ footer .wave {
   top: 50vh;
   left: 50vw;
   margin-left: -40%;
+  transition: opacity 0.2s;
 
   .wave {
     top: 100px;
@@ -1189,6 +1261,57 @@ iframe {
 
 }
 
+#motivation {
+  background: 
+  linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 33%, rgba(0,0,0,0) 100%),
+    url(/src/motivation.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+#practice {
+  background: 
+  linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 33%, rgba(0,0,0,0) 100%),
+    url(/src/practice.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+
+#coding {
+  background: 
+  linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 33%, rgba(0,0,0,0) 100%),
+    url(/src/coding.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+#designing {
+  background: 
+  linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 33%, rgba(0,0,0,0) 100%),
+    url(/src/designing.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+
+#celebrate {
+  background: 
+  linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 33%, rgba(0,0,0,0) 100%),
+    url(/src/celebrate.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
 // .card-wrapper .card-content {
 //   width: 100%;
 //   height: 100%;
