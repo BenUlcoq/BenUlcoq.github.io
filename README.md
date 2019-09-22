@@ -30,10 +30,11 @@ A number of components were designed to improve the user interactions with the s
 
 ## Sitemap
 The website contains four pages all linked together, with the contact page also being accessible through the other pages as a popup.
-[image:2A86E098-E615-4435-B25A-EB32F778540A-1778-00016C8FE7ECA8DB/Site-Map.png]
+![Site Map](https://raw.githubusercontent.com/BenUlcoq/BenUlcoq.github.io/master/docs/Site-Map.png)
 
 ### Screenshots
-Screenshots of various pages and interactions can be found in  /docs/screenshots.
+Additional Screenshots of various pages and interactions can be found in /docs/screenshots.
+![Home Page](https://raw.githubusercontent.com/BenUlcoq/BenUlcoq.github.io/master/docs/home-large.png)
 
 ### Target Audience
 The target audience for this project was prospective employers looking for full-stack developers. As such, the design of the UI and UX could be adjusted to reflect prior knowledge.
@@ -81,6 +82,9 @@ The mood board created was broken down into a number of smaller sections that re
 * Colour - colour palettes that I might use.
 * Emotion - Various items that elicit emotions I hoped to recreate with my website.
 
+![Moodboard](https://raw.githubusercontent.com/BenUlcoq/BenUlcoq.github.io/master/docs/Moodboard.png)
+
+
 ### Wire-framing and Concepting
 Once I had found a selection of items that I thought would provide a strong enough foundation for inspiration and guidance I then moved on with designing wireframes and fleshing out concepts for the website which struck a balance between satisfying the design brief, showcasing my skills and providing a platform for advertising myself for employment prospects.
 
@@ -92,10 +96,15 @@ I played around with ideas that captured certain parts of this goal until I sett
 
 From here I fleshed out the homepage concept using Figma to sort out colours and styling and nail down a more refined concept. Once I was happy with the design I jumped back into InVision to work on creating layouts for the remainder of the pages before going back to Figma to flesh them out once again.
 
+![Wireframes](https://raw.githubusercontent.com/BenUlcoq/BenUlcoq.github.io/master/docs/wireframes.png)
+![Mockups](https://raw.githubusercontent.com/BenUlcoq/BenUlcoq.github.io/master/docs/home-concept.png)
+
 ### Structuring
 Once the concepts were finalised, I laid out a rough plan for the structure of the HTML and CSS which would break out of the ordinary flow of a website and needed a little more thought to implement than a standard element.
 
 This was only a rough idea so that I had an initial direction - there was likely to be changes I needed to make later on when things were or weren’t working.
+
+![Structuring](https://raw.githubusercontent.com/BenUlcoq/BenUlcoq.github.io/master/docs/structuring.jpg)
 
 ### Development
 From here I aimed to implement a skeleton version of the site with only layout elements being positioned on the pages.
