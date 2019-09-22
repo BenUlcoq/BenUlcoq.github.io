@@ -860,7 +860,14 @@ header.scrollUp .mobile-nav.clicked {
   display: none;
 }
 
-.mobile-nav.clic .current {
+.mobile-nav.clicked {
+  width: 475px;
+  height: 475px;
+  left: calc(100vw - 277px);
+  top: unset;
+}
+
+.mobile-nav li .current {
   font-size: 0px;
   visibility: hidden;
 }
