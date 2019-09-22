@@ -932,6 +932,11 @@ header.scrollUp .mobile-nav.clicked {
   transition: line-height 200ms, opacity 200ms, margin 200ms;
 }
 
+.cards-wrapper:focus {
+  outline: 2px solid;
+  outline-offset: 0.15em;
+}
+
 .card {
   background-color: white;
   border-bottom: 2px solid white;

@@ -594,6 +594,10 @@ header.scrollUp {
     margin: 0;
     transition: line-height 200ms, opacity 200ms, margin 200ms;
   }
+  &:focus{
+    outline: 2px solid;
+    outline-offset: 0.15em;
+  }
   @include flex-wrap;
   justify-content: center;
   align-items: flex-start;
