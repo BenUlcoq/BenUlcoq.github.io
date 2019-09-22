@@ -166,7 +166,7 @@ header .logo-container h2 {
   font-weight: 400;
   -webkit-transition: opacity 0.2s 0.2s;
   transition: opacity 0.2s 0.2s;
-  color: #10417d;
+  color: #7d1010;
   white-space: nowrap;
 }
 
@@ -221,8 +221,8 @@ header .overlay {
   transition: -webkit-box-shadow 0.5s;
   transition: box-shadow 0.5s;
   transition: box-shadow 0.5s, -webkit-box-shadow 0.5s;
-  -webkit-filter: drop-shadow(0px 5px 5px rgba(0, 0, 70, 0.1));
-          filter: drop-shadow(0px 5px 5px rgba(0, 0, 70, 0.1));
+  -webkit-filter: drop-shadow(0px 5px 5px rgba(70, 0, 0, 0.1));
+          filter: drop-shadow(0px 5px 5px rgba(70, 0, 0, 0.1));
 }
 
 header .overlay .wave {
@@ -255,8 +255,8 @@ main > h1 {
 }
 
 .dark {
-  background: -webkit-gradient(linear, left bottom, left top, from(#000046), to(#1cb5e0));
-  background: linear-gradient(to top, #000046 0%, #1cb5e0 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#460000), to(#e01c1c));
+  background: linear-gradient(to top, #460000 0%, #e01c1c 100%);
   min-height: 100vh;
 }
 
@@ -343,7 +343,7 @@ main#contact {
   font-weight: 300;
   font-size: 1.2em;
   text-align: center;
-  color: #10417d;
+  color: #7d1010;
   width: 100%;
   margin-bottom: 0;
 }
@@ -351,7 +351,7 @@ main#contact {
 .landing h1 {
   font-size: 4em;
   text-align: center;
-  color: #10417d;
+  color: #7d1010;
   font-weight: 700;
   letter-spacing: -3px;
   margin-top: 0;
@@ -362,13 +362,13 @@ main#contact {
   font-size: 1.4em;
   font-weight: 300;
   text-align: center;
-  color: #10417d;
+  color: #7d1010;
   margin-top: 3em;
 }
 
 .about {
-  background: -webkit-gradient(linear, left bottom, left top, from(#000046), to(#1cb5e0));
-  background: linear-gradient(to top, #000046 0%, #1cb5e0 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#460000), to(#e01c1c));
+  background: linear-gradient(to top, #460000 0%, #e01c1c 100%);
   color: white;
   position: relative;
   min-height: 100vh;
@@ -626,7 +626,7 @@ footer {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  color: #10417d;
+  color: #7d1010;
 }
 
 footer nav {
@@ -705,7 +705,7 @@ footer .icons a {
       -ms-flex-pack: start;
           justify-content: flex-start;
   margin: 0.25em;
-  color: #10417d;
+  color: #7d1010;
   text-align: left;
 }
 
@@ -808,7 +808,7 @@ header.scrollUp .mobile-nav.clicked {
   overflow: hidden;
   -ms-flex-flow: column nowrap;
       flex-flow: column nowrap;
-  color: #10417d;
+  color: #7d1010;
   position: relative;
   left: calc(100vw - 60px);
   top: 0;
@@ -818,8 +818,8 @@ header.scrollUp .mobile-nav.clicked {
   transition: transform 500ms, width 200ms, height 200ms, left 200ms, top 0ms;
   transition: transform 500ms, width 200ms, height 200ms, left 200ms, top 0ms, -webkit-transform 500ms;
   z-index: 200;
-  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 70, 0.5);
-          box-shadow: 0px 4px 8px rgba(0, 0, 70, 0.5);
+  -webkit-box-shadow: 0px 4px 8px rgba(70, 0, 0, 0.5);
+          box-shadow: 0px 4px 8px rgba(70, 0, 0, 0.5);
 }
 
 .mobile-nav .fa-times {
@@ -829,7 +829,7 @@ header.scrollUp .mobile-nav.clicked {
 .mobile-nav > a {
   position: absolute;
   font-size: 1.5em;
-  color: #10417d;
+  color: #7d1010;
   cursor: pointer;
 }
 
@@ -970,7 +970,7 @@ header.scrollUp .mobile-nav.clicked {
   transition: line-height 750ms, opacity 600ms, height 0ms 750ms;
   font-weight: 400;
   margin: 1em 5%;
-  color: #10417d;
+  color: #7d1010;
 }
 
 .card p span {
@@ -1258,7 +1258,7 @@ header.scrollUp .mobile-nav.clicked {
   -ms-flex-negative: 1;
       flex-shrink: 1;
   font-size: 1em;
-  color: #10417d;
+  color: #7d1010;
   font-weight: 300;
   padding: 0.5em;
   border: none;
@@ -1283,14 +1283,14 @@ header.scrollUp .mobile-nav.clicked {
 
 .contact-form input[type="submit"]:hover {
   background-color: white;
-  color: #10417d;
+  color: #7d1010;
   -webkit-transition: background-color 0.3s, color 0.3s;
   transition: background-color 0.3s, color 0.3s;
 }
 
 .contact-form textarea {
   font-size: 1em;
-  color: #10417d;
+  color: #7d1010;
   font-weight: 300;
   width: 100%;
   padding: 0.5em;
@@ -1308,25 +1308,25 @@ header.scrollUp .mobile-nav.clicked {
 }
 
 .contact-form::-webkit-input-placeholder {
-  color: #10417d;
+  color: #7d1010;
   opacity: 0.5;
   font-family: inherit;
 }
 
 .contact-form:-ms-input-placeholder {
-  color: #10417d;
+  color: #7d1010;
   opacity: 0.5;
   font-family: inherit;
 }
 
 .contact-form::-ms-input-placeholder {
-  color: #10417d;
+  color: #7d1010;
   opacity: 0.5;
   font-family: inherit;
 }
 
 .contact-form::placeholder {
-  color: #10417d;
+  color: #7d1010;
   opacity: 0.5;
   font-family: inherit;
 }
@@ -1348,7 +1348,7 @@ header.scrollUp .mobile-nav.clicked {
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 2em;
-  color: #10417d;
+  color: #7d1010;
   margin: 10vw;
   border-radius: 30px 30px 0 0;
   max-width: 900px;

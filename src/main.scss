@@ -1,6 +1,6 @@
 // SCSS
 @import "helpers";
-$main-blue: #10417d;
+$main-blue: #7d1010;
 $font_family_1: "Raleway", sans-serif;
 $font_family_2: "Comfortaa", sans-serif;
 
@@ -135,7 +135,7 @@ header {
     background-color: white;
     z-index: 100;
     transition: box-shadow 0.5s;
-    filter: drop-shadow(0px 5px 5px rgba(0, 0, 70, 0.1));
+    filter: drop-shadow(0px 5px 5px rgba(70, 0, 0, 0.1));
     .wave {
       top: 99%;
     }
@@ -162,7 +162,7 @@ main {
   }
 }
 .dark {
-  background: linear-gradient(to top, #000046 0%, #1cb5e0 100%);
+  background: linear-gradient(to top, #460000 0%, #e01c1c 100%);
   min-height: 100vh;
 }
 main.dark {
@@ -248,7 +248,7 @@ main#contact {
 
 // About Section Component Styles
 .about {
-  background: linear-gradient(to top, #000046 0%, #1cb5e0 100%);
+  background: linear-gradient(to top, #460000 0%, #e01c1c 100%);
   color: white;
   position: relative;
   min-height: 100vh;
@@ -519,7 +519,7 @@ header.scrollUp {
 	margin: 0.5em;
 	transition: transform 500ms, width 200ms, height 200ms, left 200ms, top 0ms;
 	z-index: 200;
-	box-shadow: 0px 4px 8px rgba(0, 0, 70, 0.5);
+	box-shadow: 0px 4px 8px rgba(70, 0, 0, 0.5);
 	.fa-times {
 		display: none;
 	}
