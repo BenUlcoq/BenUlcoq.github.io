@@ -32,14 +32,15 @@ $(function() {
   $('.card').click(function() {
     // $(this).css("transform","scale(1)");
     $('.dark').toggleClass('hidden')
-    $('.projects-wrapper').toggleClass('hidden')
+    $('.cards-wrapper').toggleClass('hidden')
+    $('.cards').toggleClass('hidden')
     $('.card').not(this).removeClass('open')
     $('.card').not(this).toggleClass('hidden')
     $(this).toggleClass('open');
     $('header').toggle();
     $('footer').toggle();
     $('.page-title').toggleClass('hidden');
-    $(this).siblings('h2').toggleClass('hidden');
+    $(this).siblings('h3').toggleClass('hidden');
     
   })
   

@@ -3,5 +3,13 @@
 @mixin flex-wrap {
   display: flex;
   flex-flow: row wrap;
+  align-items: center;
   
+}
+
+@mixin card-image($url: url(./assets/Cards/coding.jpg)) {
+	background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0.5) 33%, rgba(0, 0, 0, 0) 100%), $url;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
 }
