@@ -1,85 +1,3 @@
-@-webkit-keyframes fadein {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadein {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes wave {
-  0% {
-    background-position-x: 0%;
-  }
-  100% {
-    background-position-x: -100vw;
-  }
-}
-
-@keyframes wave {
-  0% {
-    background-position-x: 0%;
-  }
-  100% {
-    background-position-x: -100vw;
-  }
-}
-
-@-webkit-keyframes swell {
-  0%,
-  100% {
-    -webkit-transform: translateY(1vh);
-            transform: translateY(1vh);
-  }
-  50% {
-    -webkit-transform: translateY(-1vh);
-            transform: translateY(-1vh);
-  }
-}
-
-@keyframes swell {
-  0%,
-  100% {
-    -webkit-transform: translateY(1vh);
-            transform: translateY(1vh);
-  }
-  50% {
-    -webkit-transform: translateY(-1vh);
-            transform: translateY(-1vh);
-  }
-}
-
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(359deg);
-            transform: rotate(359deg);
-  }
-}
-
-@keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(359deg);
-            transform: rotate(359deg);
-  }
-}
-
 a {
   text-decoration: none;
   color: inherit;
@@ -90,19 +8,11 @@ a:focus {
   outline-offset: 0.15em;
 }
 
-a:hover {
-  opacity: 0.6;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-}
-
 header {
   height: 80px;
   position: fixed;
   top: 0;
   z-index: 9998;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -131,10 +41,6 @@ header > a:focus {
   opacity: 0.6;
 }
 
-header > a:hover {
-  opacity: 1;
-}
-
 header .logo-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -157,15 +63,11 @@ header .logo-container {
 
 header .logo-container h2 {
   letter-spacing: -43px;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
   opacity: 0;
   font-size: 3.4em;
   font-family: "Comfortaa", sans-serif;
   margin: 0;
   font-weight: 400;
-  -webkit-transition: opacity 0.2s 0.2s;
-  transition: opacity 0.2s 0.2s;
   color: #10417d;
   white-space: nowrap;
 }
@@ -173,28 +75,6 @@ header .logo-container h2 {
 header .logo-container span {
   letter-spacing: -0.53em;
   opacity: 0;
-  -webkit-transition: opacity 0.3s, letter-spacing 0.3s;
-  transition: opacity 0.3s, letter-spacing 0.3s;
-}
-
-header .logo-container:hover h2 {
-  opacity: 1;
-  letter-spacing: -4px;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
-header .logo-container:hover span {
-  letter-spacing: -4px;
-  opacity: 1;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
-header .logo-container:hover .logo {
-  opacity: 0;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
 }
 
 header .logo {
@@ -205,8 +85,6 @@ header .logo {
   margin-left: 4px;
   margin-top: 5px;
   opacity: 1;
-  -webkit-transition: opacity 0.3s 0.1s;
-  transition: opacity 0.3s 0.1s;
 }
 
 header .overlay {
@@ -217,10 +95,6 @@ header .overlay {
   width: 100vw;
   background-color: white;
   z-index: 100;
-  -webkit-transition: -webkit-box-shadow 0.5s;
-  transition: -webkit-box-shadow 0.5s;
-  transition: box-shadow 0.5s;
-  transition: box-shadow 0.5s, -webkit-box-shadow 0.5s;
   -webkit-filter: drop-shadow(0px 5px 5px rgba(0, 0, 70, 0.1));
           filter: drop-shadow(0px 5px 5px rgba(0, 0, 70, 0.1));
 }
@@ -293,15 +167,6 @@ main#contact {
   width: 100vw;
   height: 100px;
   opacity: 1;
-  -webkit-animation: wave 10s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
-          animation: wave 10s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
-}
-
-.wave:nth-of-type(2):not(.popup) {
-  -webkit-animation: wave 10s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.5s infinite, swell 10s ease -1.25s infinite;
-          animation: wave 10s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.5s infinite, swell 10s ease -1.25s infinite;
-  opacity: 0.5;
-  position: absolute;
 }
 
 .content {
@@ -309,23 +174,14 @@ main#contact {
   margin: 5% auto;
 }
 
-.page-title {
-  -webkit-transition: line-height 200ms, opacity 200ms, margin 200ms;
-  transition: line-height 200ms, opacity 200ms, margin 200ms;
-}
-
 .page-title.hidden {
   margin: 0;
   line-height: 0;
   opacity: 0;
-  -webkit-transition: line-height 200ms, opacity 200ms, margin 200ms;
-  transition: line-height 200ms, opacity 200ms, margin 200ms;
 }
 
 .landing {
   height: 70vh;
-  -webkit-animation: fadein 1.5s ease-in;
-          animation: fadein 1.5s ease-in;
 }
 
 .landing .flex-wrapper {
@@ -578,11 +434,6 @@ main#contact {
   height: auto;
 }
 
-#more {
-  -webkit-animation: spin 15s linear infinite;
-          animation: spin 15s linear infinite;
-}
-
 .fa-chevron-down {
   font-size: 2em;
 }
@@ -607,8 +458,6 @@ main#contact {
   background: none;
   height: 0px;
   overflow: hidden;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   opacity: 0;
 }
 
@@ -781,10 +630,6 @@ header.scrollUp .overlay {
 header.scrollUp .mobile-nav.clicked {
   -webkit-transform: translateY(80px);
           transform: translateY(80px);
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
 .mobile-nav {
@@ -813,10 +658,6 @@ header.scrollUp .mobile-nav.clicked {
   left: calc(100vw - 60px);
   top: 0;
   margin: 0.5em;
-  -webkit-transition: width 200ms, height 200ms, left 200ms, top 0ms, -webkit-transform 500ms;
-  transition: width 200ms, height 200ms, left 200ms, top 0ms, -webkit-transform 500ms;
-  transition: transform 500ms, width 200ms, height 200ms, left 200ms, top 0ms;
-  transition: transform 500ms, width 200ms, height 200ms, left 200ms, top 0ms, -webkit-transform 500ms;
   z-index: 200;
   -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 70, 0.5);
           box-shadow: 0px 4px 8px rgba(0, 0, 70, 0.5);
@@ -867,7 +708,7 @@ header.scrollUp .mobile-nav.clicked {
   top: unset;
 }
 
-.mobile-nav li .current {
+.current {
   font-size: 0px;
   visibility: hidden;
 }
@@ -883,8 +724,6 @@ header.scrollUp .mobile-nav.clicked {
 
 .cards.hidden {
   line-height: 0px;
-  -webkit-transition: all 200ms;
-  transition: all 200ms;
 }
 
 .cards-wrapper {
@@ -916,8 +755,6 @@ header.scrollUp .mobile-nav.clicked {
   line-height: 1;
   margin-top: 3em;
   margin-bottom: 0.5em;
-  -webkit-transition: line-height 200ms, opacity 200ms, margin 200ms;
-  transition: line-height 200ms, opacity 200ms, margin 200ms;
 }
 
 .cards-wrapper > h3:first-of-type {
@@ -928,8 +765,6 @@ header.scrollUp .mobile-nav.clicked {
   line-height: 0;
   opacity: 0;
   margin: 0;
-  -webkit-transition: line-height 200ms, opacity 200ms, margin 200ms;
-  transition: line-height 200ms, opacity 200ms, margin 200ms;
 }
 
 .card {
@@ -941,33 +776,15 @@ header.scrollUp .mobile-nav.clicked {
   cursor: pointer;
   border-radius: 20px;
   overflow: hidden;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  -webkit-transition: width 275ms 175ms, height 800ms, border-radius 375ms, margin 1s, border-color 200ms, -webkit-transform 150ms;
-  transition: width 275ms 175ms, height 800ms, border-radius 375ms, margin 1s, border-color 200ms, -webkit-transform 150ms;
-  transition: transform 150ms, width 275ms 175ms, height 800ms, border-radius 375ms, margin 1s, border-color 200ms;
-  transition: transform 150ms, width 275ms 175ms, height 800ms, border-radius 375ms, margin 1s, border-color 200ms, -webkit-transform 150ms;
   -webkit-box-shadow: 0 15px 20px black;
           box-shadow: 0 15px 20px black;
   z-index: 1000;
-}
-
-.card:hover {
-  -webkit-transform: scale(1.1) rotate(1deg);
-          transform: scale(1.1) rotate(1deg);
-}
-
-.card:nth-of-type(even):hover {
-  -webkit-transform: scale(1.1) rotate(-1deg);
-          transform: scale(1.1) rotate(-1deg);
 }
 
 .card p {
   line-height: 0;
   opacity: 0;
   height: 0px;
-  -webkit-transition: line-height 750ms, opacity 600ms, height 0ms 750ms;
-  transition: line-height 750ms, opacity 600ms, height 0ms 750ms;
   font-weight: 400;
   margin: 1em 5%;
   color: #10417d;
@@ -992,8 +809,6 @@ header.scrollUp .mobile-nav.clicked {
   background-position: center;
   width: 100%;
   height: 100%;
-  -webkit-transition: height 500ms 400ms;
-  transition: height 500ms 400ms;
 }
 
 .card .img-overlay span {
@@ -1160,34 +975,19 @@ header.scrollUp .mobile-nav.clicked {
   height: 90vh;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  -webkit-transition: width 500ms, height 500ms 300ms, margin 1s, -webkit-transform 150ms;
-  transition: width 500ms, height 500ms 300ms, margin 1s, -webkit-transform 150ms;
-  transition: transform 150ms, width 500ms, height 500ms 300ms, margin 1s;
-  transition: transform 150ms, width 500ms, height 500ms 300ms, margin 1s, -webkit-transform 150ms;
   z-index: 19000;
   margin-top: 5vh;
-}
-
-.card.open:hover {
-  -webkit-transform: scale(1);
-          transform: scale(1);
 }
 
 .card.open p {
   line-height: 1.4;
   opacity: 1;
   height: auto;
-  -webkit-transition: line-height 300ms 675ms, opacity 300ms 675ms, height 300ms 675ms;
-  transition: line-height 300ms 675ms, opacity 300ms 675ms, height 300ms 675ms;
   display: block;
 }
 
 .card.open .img-overlay {
   height: 50%;
-  -webkit-transition: height 300ms 300ms;
-  transition: height 300ms 300ms;
 }
 
 .card.open .img-overlay .titles span {
@@ -1207,8 +1007,6 @@ header.scrollUp .mobile-nav.clicked {
   height: 0px;
   width: 0px;
   margin: 0;
-  -webkit-transition: opacity 500ms, width 500ms, height 500ms;
-  transition: opacity 500ms, width 500ms, height 500ms;
 }
 
 #contact > h1 {
@@ -1273,19 +1071,10 @@ header.scrollUp .mobile-nav.clicked {
   border: 2px solid white;
   border-radius: 100px;
   color: white;
-  -webkit-transition: background-color 0.3s, color 0.3s;
-  transition: background-color 0.3s, color 0.3s;
   cursor: pointer;
   -webkit-box-flex: 0;
       -ms-flex-positive: 0;
           flex-grow: 0;
-}
-
-.contact-form input[type="submit"]:hover {
-  background-color: white;
-  color: #10417d;
-  -webkit-transition: background-color 0.3s, color 0.3s;
-  transition: background-color 0.3s, color 0.3s;
 }
 
 .contact-form textarea {
@@ -1356,8 +1145,6 @@ header.scrollUp .mobile-nav.clicked {
   top: 50vh;
   left: 50vw;
   margin-left: -40%;
-  -webkit-transition: opacity 0.2s;
-  transition: opacity 0.2s;
 }
 
 .popup.overlay .wave {
@@ -1382,8 +1169,6 @@ iframe {
   -webkit-box-shadow: 0px 0px 15px black;
           box-shadow: 0px 0px 15px black;
   opacity: 1;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
 }
 
 iframe footer {
@@ -1392,8 +1177,6 @@ iframe footer {
 
 .popup.hidden {
   height: 0px;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
   opacity: 0;
 }
 

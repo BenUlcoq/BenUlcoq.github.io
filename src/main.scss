@@ -4,43 +4,7 @@ $main-blue: #10417d;
 $font_family_1: "Raleway", sans-serif;
 $font_family_2: "Comfortaa", sans-serif;
 
-// Animations
-@keyframes fadein {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 
-@keyframes wave {
-  0% {
-    background-position-x: 0%;
-  }
-  100% {
-    background-position-x: -100vw;
-  }
-}
-
-@keyframes swell {
-  0%,
-  100% {
-    transform: translateY(1vh);
-  }
-  50% {
-    transform: translateY(-1vh);
-  }
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(359deg);
-  }
-}
 
 // Top Level Styles
 a {
@@ -48,10 +12,7 @@ a {
     outline: 2px solid;
     outline-offset: 0.15em;
   }
-  &:hover {
-    opacity: 0.6;
-    transition: opacity 0.3s;
-  }
+
   text-decoration: none;
   color: inherit;
 }
@@ -61,9 +22,7 @@ header {
       outline: none;
       opacity: 0.6;
     }
-    &:hover {
-      opacity: 1;
-    }
+
     position: absolute;
     left: 0;
     z-index: 101;
@@ -72,7 +31,6 @@ header {
   position: fixed;
   top: 0;
   z-index: 9998;
-  transition: all 0.5s;
   @include flex-wrap;
   flex-wrap: nowrap;
   justify-content: flex-end;
@@ -84,37 +42,22 @@ header {
     padding: 20px;
     h2 {
       letter-spacing: -43px;
-      transition: all 0.5s;
+  
       opacity: 0;
       font-size: 3.4em;
       font-family: $font_family_2;
       margin: 0;
       font-weight: 400;
-      transition: opacity 0.2s 0.2s;
+  
       color: $main-blue;
       white-space: nowrap;
     }
     span {
       letter-spacing: -0.53em;
       opacity: 0;
-      transition: opacity 0.3s, letter-spacing 0.3s;
+  
     }
-    &:hover {
-      h2 {
-        opacity: 1;
-        letter-spacing: -4px;
-        transition: all 0.5s;
-      }
-      span {
-        letter-spacing: -4px;
-        opacity: 1;
-        transition: all 0.5s;
-      }
-      .logo {
-        opacity: 0;
-        transition: all 0.3s;
-      }
-    }
+    
   }
 
   .logo {
@@ -124,7 +67,7 @@ header {
     margin-left: 4px;
     margin-top: 5px;
     opacity: 1;
-    transition: opacity 0.3s 0.1s;
+
   }
   .overlay {
     position: absolute;
@@ -134,7 +77,7 @@ header {
     width: 100vw;
     background-color: white;
     z-index: 100;
-    transition: box-shadow 0.5s;
+
     filter: drop-shadow(0px 5px 5px rgba(0, 0, 70, 0.1));
     .wave {
       top: 99%;
@@ -185,34 +128,21 @@ main#contact {
   width: 100vw;
   height: 100px;
   opacity: 1;
-  animation: wave 10s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
-  &:nth-of-type(2) {
-    &:not(.popup) {
-      animation: wave 10s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.5s infinite,
-        swell 10s ease -1.25s infinite;
-      opacity: 0.5;
-      position: absolute;
-    }
-  }
 }
 .content {
   max-width: 80%;
   margin: 5% auto;
 }
-.page-title {
-  transition: line-height 200ms, opacity 200ms, margin 200ms;
-}
+
 .page-title.hidden {
   margin: 0;
   line-height: 0;
   opacity: 0;
-  transition: line-height 200ms, opacity 200ms, margin 200ms;
 }
 
 // Landing Section Component Styles
 .landing {
   height: 70vh;
-  animation: fadein 1.5s ease-in;
   .flex-wrapper {
     height: 100%;
     align-items: center;
@@ -376,9 +306,6 @@ main#contact {
   width: 44px;
   height: auto;
 }
-#more {
-  animation: spin 15s linear infinite;
-}
 
 // Chevron Nav Styles
 .fa-chevron-down {
@@ -400,7 +327,6 @@ main#contact {
   background: none;
   height: 0px;
   overflow: hidden;
-  transition: all 0.3s;
   opacity: 0;
 }
 .border {
@@ -500,7 +426,7 @@ header.scrollUp {
   }
   .mobile-nav.clicked {
     transform: translateY(80px);
-    transition: transform 0.5s;
+
   }
 }
 .mobile-nav {
@@ -517,7 +443,6 @@ header.scrollUp {
 	left: calc(100vw - 60px);
 	top: 0;
 	margin: 0.5em;
-	transition: transform 500ms, width 200ms, height 200ms, left 200ms, top 0ms;
 	z-index: 200;
 	box-shadow: 0px 4px 8px rgba(0, 0, 70, 0.5);
 	.fa-times {
@@ -553,7 +478,7 @@ header.scrollUp {
 	top: unset;
 }
   
-.mobile-nav li .current {
+.current {
   font-size: 0px;
   visibility: hidden;
 }
@@ -573,7 +498,6 @@ header.scrollUp {
 
 .cards.hidden {
   line-height: 0px;
-  transition: all 200ms;
 }
 
 .cards-wrapper {
@@ -583,7 +507,7 @@ header.scrollUp {
     line-height: 1;
     margin-top: 3em;
     margin-bottom: 0.5em;
-    transition: line-height 200ms, opacity 200ms, margin 200ms;
+
     &:first-of-type {
       margin-top: 1em;
     }
@@ -592,7 +516,7 @@ header.scrollUp {
     line-height: 0;
     opacity: 0;
     margin: 0;
-    transition: line-height 200ms, opacity 200ms, margin 200ms;
+
   }
   @include flex-wrap;
   justify-content: center;
@@ -603,14 +527,7 @@ header.scrollUp {
 }
 
 .card {
-  &:hover {
-    transform: scale(1.1) rotate(1deg);
-  }
-  &:nth-of-type(even) {
-    &:hover {
-      transform: scale(1.1) rotate(-1deg);
-    }
-  }
+  
   background-color: white;
   border-bottom: 2px solid white;
   margin: 1em;
@@ -619,16 +536,13 @@ header.scrollUp {
   cursor: pointer;
   border-radius: 20px;
   overflow: hidden;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 150ms, width 275ms 175ms, height 800ms,
-    border-radius 375ms, margin 1s, border-color 200ms;
   box-shadow: 0 15px 20px black;
   z-index: 1000;
   p {
     line-height: 0;
     opacity: 0;
     height: 0px;
-    transition: line-height 750ms, opacity 600ms, height 0ms 750ms;
+
     font-weight: 400;
     margin: 1em 5%;
     color: $main-blue;
@@ -655,7 +569,7 @@ header.scrollUp {
     background-position: center;
     width: 100%;
     height: 100%;
-    transition: height 500ms 400ms;
+
     span {
       margin: 0.5em 0;
     }
@@ -744,15 +658,11 @@ header.scrollUp {
   }
 }
 .card.open {
-  &:hover {
-    transform: scale(1);
-  }
+ 
   overflow: scroll;
   width: 90vw;
   height: 90vh;
   transform: rotate(0deg);
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 150ms, width 500ms, height 500ms 300ms, margin 1s;
   z-index: 19000;
   margin-top: 5vh;
 
@@ -760,12 +670,12 @@ header.scrollUp {
     line-height: 1.4;
     opacity: 1;
     height: auto;
-    transition: line-height 300ms 675ms, opacity 300ms 675ms, height 300ms 675ms;
+
     display: block;
   }
   .img-overlay {
     height: 50%;
-    transition: height 300ms 300ms;
+
 
     .titles {
       span {
@@ -786,7 +696,6 @@ header.scrollUp {
   height: 0px;
   width: 0px;
   margin: 0;
-  transition: opacity 500ms, width 500ms, height 500ms;
 }
 
 // Contact Form Component Styles
@@ -831,14 +740,10 @@ header.scrollUp {
     border: 2px solid white;
     border-radius: 100px;
     color: white;
-    transition: background-color 0.3s, color 0.3s;
+
     cursor: pointer;
     flex-grow: 0;
-    &:hover {
-      background-color: white;
-      color: $main-blue;
-      transition: background-color 0.3s, color 0.3s;
-    }
+
   }
   textarea {
     font-size: 1em;
@@ -881,7 +786,6 @@ header.scrollUp {
   top: 50vh;
   left: 50vw;
   margin-left: -40%;
-  transition: opacity 0.2s;
   .wave {
     top: 100px;
     width: 80vw;
@@ -903,14 +807,12 @@ iframe {
   border-radius: 30px;
   box-shadow: 0px 0px 15px black;
   opacity: 1;
-  transition: all 0.5s;
   footer {
     display: none !important;
   }
 }
 .popup.hidden {
   height: 0px;
-  transition: all 0.5s;
   opacity: 0;
 }
 
