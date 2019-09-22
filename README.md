@@ -30,6 +30,7 @@ A number of components were designed to improve the user interactions with the s
 
 ## Sitemap
 The website contains four pages all linked together, with the contact page also being accessible through the other pages as a popup.
+
 ![Site Map](https://raw.githubusercontent.com/BenUlcoq/BenUlcoq.github.io/master/docs/Site-Map.png)
 
 ### Screenshots
