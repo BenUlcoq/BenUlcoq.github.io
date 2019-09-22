@@ -85,7 +85,7 @@ $(function() {
 });
 
 
-  $('iframe').load( function () {
+  $('iframe').on("load", function() {
       $(this).contents().find("header").remove();
       $(this).contents().find("footer").remove();
       $(this).contents().find("main").css("padding-bottom","0");
