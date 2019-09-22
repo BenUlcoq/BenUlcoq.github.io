@@ -1,130 +1,317 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="Description" content="Ben Ulcoq's Portfolio Website Homepage. Contains information about Ben, his interests and skills and links to LinkedIn, Github, Twitter and his Resume.">
-  <link rel="stylesheet" type="text/css" href ="./main.css">
-  <link href="https://fonts.googleapis.com/css?family=Comfortaa:400%7CRaleway:300,400,700&display=swap" rel="stylesheet">
-  <link rel="icon" href="./assets/icons/logo.ico">
-  <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="./listeners.js"></script>
-  <script src="https://kit.fontawesome.com/0ea72c9220.js"></script>
-  <title>Ben Ulcoq - Web Developer</title>
-</head>
-<body class="homepage">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="Description"
+      content="Ben Ulcoq's Portfolio Website Homepage. Contains information about Ben, his interests and skills and links to LinkedIn, Github, Twitter and his Resume."
+    />
+    <link rel="stylesheet" type="text/css" href="./main.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Comfortaa:400%7CRaleway:300,400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./assets/icons/logo.ico" />
+    <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./listeners.js"></script>
+    <script src="https://kit.fontawesome.com/0ea72c9220.js"></script>
+    <title>Ben Ulcoq - Web Developer</title>
+  </head>
+
+  <body class="homepage">
+    <!-- Header component with Logo and Menu -->
     <header class="scrollUp">
+      <!-- Logo Component that links to homepage. -->
       <a href="#">
-      <div class="logo-container">
-        <img alt="Homepage" class="logo" src="./assets/icons/Logo.svg"/>
-        <h2>b<span>en ulco</span>q</h2>
-      </div>
-    </a>
-        <div class="mobile-nav">
-            <a href="javascript:;" id="open-navmenu" tabindex="0" class="fas fa-bars"></a>
-            <a href="javascript:;" id="close-navmenu" tabindex="0" class="fas fa-times"></a>
+        <div class="logo-container">
+          <img alt="Homepage" class="logo" src="./assets/icons/Logo.svg" />
+          <h2>b<span>en ulco</span>q</h2>
+        </div>
+      </a>
+
+      <!-- Hamburger menu component that reveals page links on interaction -->
+      <div class="mobile-nav">
+        <a
+          href="javascript:;"
+          id="open-navmenu"
+          tabindex="0"
+          class="fas fa-bars"
+        ></a>
+        <a
+          href="javascript:;"
+          id="close-navmenu"
+          tabindex="0"
+          class="fas fa-times"
+        ></a>
+
+        <!-- Page links -->
         <ul class="navbar-menu">
-          <li><strong><span class="current">Current Page</span>Home</strong></li>
+          <li>
+            <strong><span class="current">Current Page</span>Home</strong>
+          </li>
           <li><a href="./projects.html">Projects</a></li>
           <li><a href="./blog.html">Blog</a></li>
           <li><a id="open-popup" href="javascript:;">Contact</a></li>
         </ul>
       </div>
+
+      <!-- Wave Visual Component -->
       <div class="overlay">
-          <div class="wave"></div>
+        <div class="wave"></div>
       </div>
     </header>
-  
-  <main>
-    <section class="landing">
+
+    <!-- Main Content -->
+    <main>
+      <!-- Landing Component with greeting content-->
+      <section class="landing">
         <div class="flex-wrapper">
           <div class="content">
             <p>Hi there!</p>
             <h1>I'm Ben.</h1>
-            <h2>I'm a full-stack developer who loves building apps and websites.</h2>
+            <h2>
+              I'm a full-stack developer who loves building apps and websites.
+            </h2>
           </div>
         </div>
-    </section>
+      </section>
 
-    <section class="about" id="about">
-      <div class="border">
-        <div class="wave"></div>
-        <div class="wave"></div>
+      <!-- About Me Component containing information -->
+      <section class="about" id="about">
+        <!-- Wave Visual Components -->
+        <div class="border">
+          <div class="wave"></div>
+          <div class="wave"></div>
+        </div>
+        <div class="flex-wrapper">
+          <div class="chevron-container" id="chevron-container">
+            <a href="#about" class="fas fa-chevron-down"></a>
+          </div>
+          <!-- Information Container-->
+          <div class="content grid">
+            <div class="heading">
+              <img
+                alt="Photo of Ben Ulcoq"
+                src="assets/ProfilePhoto.png"
+                class="photo"
+              />
+              <h2>About me</h2>
+            </div>
+
+            <p>
+              I'm Ben Ulcoq and I'm currently studying full-time at the Coder
+              Academy Fast Track Bootcamp in Brisbane and loving every minute of
+              it.
+            </p>
+            <p>
+              I completed a Bachelor of Digital Media and graduated with
+              Distinction in 2016. After working as a Graphic Designer in
+              Rockhampton for two years I'm now looking to make a change into a
+              development role.
+            </p>
+            <p>
+              I've since begun my journey not only into development but a whole
+              new life in Brisbane. With so much still to learn, I'm excited to
+              hear from people with a wealth of experience in all aspects of the
+              industry.
+            </p>
+
+            <p>
+              My design background lends itself to an interest in UX/UI and
+              designing and creating effective solutions to problems in that
+              space. Since diving deeper into the world of development I've also
+              taken an interest in Data Science and Machine Learning as well as
+              Cyber Security.
+            </p>
+
+            <!-- Icons Component containing links to my accounts-->
+            <section class="icons">
+              <h3>Use these links to find out more about what I'm up to!</h3>
+              <a
+                href="https://www.linkedin.com/in/ben-ulcoq/"
+                target="_blank"
+                rel="noreferrer"
+                class="fab fa-linkedin fa-fw"
+                ><span>LinkedIn</span></a
+              >
+              <a
+                href="https://github.com/BenUlcoq"
+                target="_blank"
+                rel="noreferrer"
+                class="fab fa-github-square fa-fw"
+                ><span>Github</span></a
+              >
+              <a
+                href="https://twitter.com/BenUlcoq"
+                target="_blank"
+                rel="noreferrer"
+                class="fab fa-twitter-square fa-fw"
+                ><span>Twitter</span></a
+              >
+              <a
+                href="https://medium.com/@ben.ulcoq"
+                target="_blank"
+                rel="noreferrer"
+                class="fab fa-medium fa-fw"
+                ><span>Medium</span></a
+              >
+              <a
+                href="./assets/Ben-Ulcoq-Resume.pdf"
+                class="fas fa-file-pdf fa-fw"
+                download
+                ><span>Resume</span></a
+              >
+            </section>
+
+            <!-- Skillset Component containing icons representing my skillset -->
+            <section class="skillset">
+              <h2>Skills</h2>
+              <section class="dev skills">
+                <h3>Developer</h3>
+                <div class="skill-wrapper">
+                  <img
+                    alt="HTML5 Logo"
+                    class="skill"
+                    id="html5"
+                    src="./assets/icons/html-5.svg"
+                  />
+                  <p>HTML</p>
+                </div>
+                <div class="skill-wrapper">
+                  <img
+                    alt="CSS3 Logo"
+                    class="skill"
+                    id="css3"
+                    src="./assets/icons/css3.svg"
+                  />
+                  <p>CSS</p>
+                </div>
+                <div class="skill-wrapper">
+                  <img
+                    alt="Javascript Logo"
+                    class="skill"
+                    id="javascript"
+                    src="./assets/icons/javascript.svg"
+                  />
+                  <p>Javascript</p>
+                </div>
+                <div class="skill-wrapper">
+                  <img
+                    alt="Ruby Language Logo"
+                    class="skill"
+                    id="ruby"
+                    src="./assets/icons/ruby.svg"
+                  />
+                  <p>Ruby</p>
+                </div>
+                <div class="skill-wrapper">
+                  <img
+                    alt="Loading Icon"
+                    class="skill"
+                    id="more"
+                    src="./assets/icons/loader.svg"
+                  />
+                  <p>More to come!</p>
+                </div>
+              </section>
+              <section class="design skills">
+                <h3>Designer</h3>
+                <div class="skill-wrapper">
+                  <img
+                    alt="Photoshop Logo"
+                    class="skill"
+                    id="PS"
+                    src="./assets/icons/photoshop.svg"
+                  />
+                  <p>Photoshop</p>
+                </div>
+                <div class="skill-wrapper">
+                  <img
+                    alt="Illustrator Logo"
+                    class="skill"
+                    id="AI"
+                    src="./assets/icons/illustrator.svg"
+                  />
+                  <p>Illustrator</p>
+                </div>
+                <div class="skill-wrapper">
+                  <img
+                    alt="InDesign Logo"
+                    class="skill"
+                    id="ID"
+                    src="./assets/icons/indesign.svg"
+                  />
+                  <p>InDesign</p>
+                </div>
+              </section>
+            </section>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer Component containing alternative navigation-->
+    <footer>
+      <!-- Wave Visual Component -->
+      <div class="wave"></div>
+
+      <div class="footer-wrapper">
+        <a href="#" id="logo"
+          ><img alt="Home page" class="logo" src="./assets/icons/Logo.svg"
+        /></a>
+        <nav>
+          <ul class="footer-menu">
+            <li>
+              <strong><span class="current">Current Page</span>Home</strong>
+            </li>
+            <li><a href="./projects.html">Projects</a></li>
+            <li><a href="./blog.html">Blog</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <nav class="icons">
+          <a
+            href="https://www.linkedin.com/in/ben-ulcoq/"
+            target="_blank"
+            rel="noreferrer"
+            class="fab fa-linkedin fa-fw"
+            ><span>LinkedIn</span></a
+          >
+          <a
+            href="https://github.com/BenUlcoq"
+            target="_blank"
+            rel="noreferrer"
+            class="fab fa-github-square fa-fw"
+            ><span>Github</span></a
+          >
+          <a
+            href="https://twitter.com/BenUlcoq"
+            target="_blank"
+            rel="noreferrer"
+            class="fab fa-twitter-square fa-fw"
+            ><span>Twitter</span></a
+          >
+        </nav>
       </div>
-      <div class="flex-wrapper">
-        <div class="chevron-container" id="chevron-container">
-          <a href="#about" class="fas fa-chevron-down"></a>
-        </div>
-        <div class="content grid">
-          <div class="heading">
-            <img alt="Photo of Ben Ulcoq" src="assets/ProfilePhoto.png" class="photo"/>
-            <h2>About me</h2>
-          </div>
-              
-                  <p> I'm Ben Ulcoq and I'm currently studying full-time at the Coder Academy Fast Track Bootcamp in Brisbane and loving every minute of it.</p>
-<p>
-I completed a Bachelor of Digital Media and graduated with Distinction in 2016. After working as a Graphic Designer in Rockhampton for two years I'm now looking to make a change into a development role.</p>
-<p>
-I've since begun my journey not only into development but a whole new life in Brisbane. With so much still to learn, I'm excited to hear from people with a wealth of experience in all aspects of the industry.</p>
+    </footer>
 
-<p>
-My design background lends itself to an interest in UX/UI and designing and creating effective solutions to problems in that space. Since diving deeper into the world of development I've also taken an interest in Data Science and Machine Learning as well as Cyber Security.
-</p>
-
-<section class="icons">
-    <h3>Use these links to find out more about what I'm up to!</h3>
-    <a href="https://www.linkedin.com/in/ben-ulcoq/" target="_blank" rel="noreferrer" class="fab fa-linkedin fa-fw"><span>LinkedIn</span></a>
-    <a href="https://github.com/BenUlcoq" target="_blank" rel="noreferrer" class="fab fa-github-square fa-fw"><span>Github</span></a>
-    <a href="https://twitter.com/BenUlcoq" target="_blank" rel="noreferrer" class="fab fa-twitter-square fa-fw"><span>Twitter</span></a>
-    <a href="https://medium.com/@ben.ulcoq" target="_blank" rel="noreferrer" class="fab fa-medium fa-fw"><span>Medium</span></a>
-    <a href="./assets/Ben-Ulcoq-Resume.pdf" class="fas fa-file-pdf fa-fw" download><span>Resume</span></a>
-    
-</section>
-                  <section class="skillset">
-                    <h2>Skills</h2>
-                  <section class="dev skills">
-                    <h3>Developer</h3>
-                      <div class="skill-wrapper"><img alt="HTML5 Logo" class="skill" id="html5" src="./assets/icons/html-5.svg"/><p>HTML</p></div>  
-                      <div class="skill-wrapper"><img alt="CSS3 Logo" class="skill" id="css3" src="./assets/icons/css3.svg"/><p>CSS</p></div>
-                      <div class="skill-wrapper"><img alt="Javascript Logo" class="skill" id="javascript" src="./assets/icons/javascript.svg"/><p>Javascript</p></div>
-                      <div class="skill-wrapper"><img alt="Ruby Language Logo" class="skill" id="ruby" src="./assets/icons/ruby.svg"/><p>Ruby</p></div>
-                      <div class="skill-wrapper"><img alt="Loading Icon" class="skill" id="more" src="./assets/icons/loader.svg"/><p>More to come!</p></div>
-                  </section>
-                      <section class="design skills">
-                        <h3>Designer</h3>
-                      <div class="skill-wrapper"><img alt="Photoshop Logo" class="skill" id="PS" src="./assets/icons/photoshop.svg"/><p>Photoshop</p></div>
-                      <div class="skill-wrapper"><img alt="Illustrator Logo" class="skill" id="AI" src="./assets/icons/illustrator.svg"/><p>Illustrator</p></div>
-                      <div class="skill-wrapper"><img alt="InDesign Logo" class="skill" id="ID" src="./assets/icons/indesign.svg"/><p>InDesign</p></div>
-                  </section>
-                </section>
-              </div>
-        </div>
-    </section>
-  </main>
-  <footer>
-    
-    <div class="wave"></div>
-    <div class="footer-wrapper">
-      <a href="#" id="logo"><img alt="Home page" class="logo" src="./assets/icons/Logo.svg"/></a>
-      <nav><ul class="footer-menu">
-          <li><strong><span class="current">Current Page</span>Home</strong></li>
-          <li><a href="./projects.html">Projects</a></li>
-          <li><a href="./blog.html">Blog</a></li>
-          <li><a href="./contact.html">Contact</a></li>
-      </ul></nav>
-      <nav class="icons">
-          <a href="https://www.linkedin.com/in/ben-ulcoq/" target="_blank" rel="noreferrer" class="fab fa-linkedin fa-fw"><span>LinkedIn</span></a>
-          <a href="https://github.com/BenUlcoq" target="_blank" rel="noreferrer" class="fab fa-github-square fa-fw"><span>Github</span></a>
-          <a href="https://twitter.com/BenUlcoq" target="_blank" rel="noreferrer" class="fab fa-twitter-square fa-fw"><span>Twitter</span></a>
-      </nav>
-    </div>
-  </footer>
-  <div class="popup overlay hidden">
-      <a href="javascript:;" id="close-popup" tabindex="0" class="fas fa-times"></a>
+    <!-- Contact Popup Component -->
+    <div class="popup overlay hidden">
+      <a
+        href="javascript:;"
+        id="close-popup"
+        tabindex="0"
+        class="fas fa-times"
+      ></a>
       <div class="popup wave hidden"></div>
-  </div>
-  <iframe title="Contact Form Popup"  class="popup hidden" src="./contact.html" sandbox="allow-same-origin allow-scripts allow-forms">
-  </iframe>
-</body>
+    </div>
+    <iframe
+      title="Contact Form Popup"
+      class="popup hidden"
+      src="./contact.html"
+      sandbox="allow-same-origin allow-scripts allow-forms"
+    >
+    </iframe>
+  </body>
 </html>

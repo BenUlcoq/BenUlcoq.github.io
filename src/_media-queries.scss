@@ -1,4 +1,4 @@
-@media only screen and (min-width:800px) {
+@media only screen and (min-width: 800px) {
   @keyframes wave {
     0% {
       background-position-x: 0%;
@@ -7,55 +7,53 @@
       background-position-x: -800px;
     }
   }
-
 }
 
 @media only screen and (max-width: 750px) {
-	footer {
-		#logo {
-			flex-basis: 100%;
-		}
-	}
+  footer {
+    #logo {
+      flex-basis: 100%;
+    }
+  }
 }
 @media only screen and (max-width: 400px) {
-	.grid {
-		h2 {
-			margin: 1em 0;
-		}
-	}
+  .grid {
+    h2 {
+      margin: 1em 0;
+    }
+  }
 }
 
-	
 @media only screen and (max-width: 770px) {
-	.card {
-		width: 80%;
-		height: 40vw;
-		&:not(.hidden) {
-			min-height: 200px;
-		}
-	}
+  .card {
+    width: 80%;
+    height: 40vw;
+    &:not(.hidden) {
+      min-height: 200px;
+    }
+  }
 }
 @media only screen and (max-width: 515px) {
-	.grid {
-		.heading {
-			margin-bottom: 0;
-		}
-		a {
-			margin: 0;
-			width: auto;
-			span {
-				display: none;
-			}
-		}
-	}
-	.skills {
-		width: 100%;
-	}
+  .grid {
+    .heading {
+      margin-bottom: 0;
+    }
+    a {
+      margin: 0;
+      width: auto;
+      span {
+        display: none;
+      }
+    }
+  }
+  .skills {
+    width: 100%;
+  }
 }
 @media only screen and (min-width: 1125px) {
-	.popup {
-		&:not(.wave) {
-			margin-left: -450px;
-		}
+  .popup {
+    &:not(.wave) {
+      margin-left: -450px;
+    }
   }
 }

@@ -1,216 +1,500 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="Description" content="Ben Ulcoq's Website Blog Page. Contains all of the blogs that Ben has written.">
-  <link rel="stylesheet" type="text/css" href ="./main.css">
-  <link href="https://fonts.googleapis.com/css?family=Comfortaa:400%7CRaleway:300,400,700&display=swap" rel="stylesheet">
-  <link rel="icon" href="./assets/icons/logo.ico">
-  <script src="http://code.jquery.com/jquery-3.4.0.min.js"></script>
-  <script src="./listeners.js"></script>
-  <script src="https://kit.fontawesome.com/0ea72c9220.js"></script>
-  <title>Blog - Ben Ulcoq, Web Developer</title>
-</head>
-<body>
-    <header>
-      <a href="./index.html">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="Description"
+      content="Ben Ulcoq's Website Blog Page. Contains all of the blogs that Ben has written."
+    />
+    <link rel="stylesheet" type="text/css" href="./main.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Comfortaa:400%7CRaleway:300,400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./assets/icons/logo.ico" />
+    <script src="http://code.jquery.com/jquery-3.4.0.min.js"></script>
+    <script src="./listeners.js"></script>
+    <script src="https://kit.fontawesome.com/0ea72c9220.js"></script>
+    <title>Blog - Ben Ulcoq, Web Developer</title>
+  </head>
+  <body>
+    <!-- Header component with Logo and Menu -->
+    <header class="scrollUp">
+      <!-- Logo Component that links to homepage. -->
+      <a href="#">
         <div class="logo-container">
-          <img alt="Homepage" class="logo" src="./assets/icons/Logo.svg"/>
+          <img alt="Homepage" class="logo" src="./assets/icons/Logo.svg" />
           <h2>b<span>en ulco</span>q</h2>
         </div>
       </a>
-          <div class="mobile-nav">
-              <a href="javascript:;" id="open-navmenu" tabindex="0" class="fas fa-bars"></a>
-              <a href="javascript:;" id="close-navmenu" tabindex="0" class="fas fa-times"></a>
-          <ul class="navbar-menu">
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./projects.html">Projects</a></li>
-            <li><strong><span class="current">Current Page</span>Blog</strong></li>
-            <li><a id="open-popup" href="javascript:;">Contact</a></li>
-          </ul>
-        </div>
-        <div class="overlay">
-            <div class="wave"></div>
-        </div>
-      </header>
+
+      <!-- Hamburger menu component that reveals page links on interaction -->
+      <div class="mobile-nav">
+        <a
+          href="javascript:;"
+          id="open-navmenu"
+          tabindex="0"
+          class="fas fa-bars"
+        ></a>
+        <a
+          href="javascript:;"
+          id="close-navmenu"
+          tabindex="0"
+          class="fas fa-times"
+        ></a>
+
+        <!-- Page links -->
+        <ul class="navbar-menu">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./projects.html">Projects</a></li>
+          <li>
+            <strong><span class="current">Current Page</span>Blog</strong>
+          </li>
+          <li><a id="open-popup" href="javascript:;">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Wave Visual Component -->
+      <div class="overlay">
         <div class="wave"></div>
-  <main class="dark">
-    <h1 class="page-title">Blog</h1>
-    <section class="cards">
-      <h2>Latest Blog Posts</h2>
-    <div class="cards-wrapper">
-        <article class="card wrapper">
+      </div>
+    </header>
+
+    <!-- Wave Visual Component -->
+    <div class="wave"></div>
+
+    <!-- Main Content -->
+    <main class="dark">
+      <h1 class="page-title">Blog</h1>
+
+      <!-- Cards Container -->
+      <section class="cards">
+        <h2>Latest Blog Posts</h2>
+        <div class="cards-wrapper">
+          <!-- First Card Component -->
+          <article class="card wrapper">
             <div class="img-overlay blog-img" id="celebrate">
-                <div class="wave"></div>
-                <div class="wave"></div>
+              <div class="wave"></div>
+              <div class="wave"></div>
               <div class="titles">
                 <h3 class="blog-title">My website is up and running!</h3>
-                  <span>Published 21st September</span>
-                </div>
-                </div>
-                  <p>
-                      Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
-                    </p><p>
-                      Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.
-                    </p><p>
-                      Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p> 
-                  </article>
+                <span>Published 21st September</span>
+              </div>
+            </div>
+            <p>
+              Leverage agile frameworks to provide a robust synopsis for high
+              level overviews. Iterative approaches to corporate strategy foster
+              collaborative thinking to further the overall value proposition.
+              Organically grow the holistic world view of disruptive innovation
+              via workplace diversity and empowerment.
+            </p>
+            <p>
+              Bring to the table win-win survival strategies to ensure proactive
+              domination. At the end of the day, going forward, a new normal
+              that has evolved from generation X is on the runway heading
+              towards a streamlined cloud solution. User generated content in
+              real-time will have multiple touchpoints for offshoring.
+            </p>
+            <p>
+              Capitalize on low hanging fruit to identify a ballpark value added
+              activity to beta test. Override the digital divide with additional
+              clickthroughs from DevOps. Nanotechnology immersion along the
+              information highway will close the loop on focusing solely on the
+              bottom line.
+            </p>
+          </article>
 
+          <!-- Second Card Component -->
           <article class="card wrapper">
-              <div class="img-overlay blog-img" id="designing">
-                  <div class="wave"></div>
-                  <div class="wave"></div>
-                <div class="titles">
-                  <h3 class="blog-title">A Designer's Guide to Programming</h3>
-                    <span>Published 17th September</span>
-                  </div>
-                  </div>
-                    <p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
-                      </p><p>
-                        Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.
-                      </p><p>
-                        Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.
-                      </p><p>
-                        Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.
-                      </p><p>
-                        Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.
-                      </p><p>
-                        Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions.
-                      </p><p>
-                        Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service.
-                      </p><p>
-                        Objectively innovate empowered manufactured products whereas parallel platforms. Holisticly predominate extensible testing procedures for reliable supply chains. Dramatically engage top-line web services vis-a-vis cutting-edge deliverables.
-                      </p><p>
-                        Proactively envisioned multimedia based expertise and cross-media growth strategies. Seamlessly visualize quality intellectual capital without superior collaboration and idea-sharing. Holistically pontificate installed base portals after maintainable products.
-                      </p><p>
-                        Phosfluorescently engage worldwide methodologies with web-enabled technology. Interactively coordinate proactive e-commerce via process-centric "outside the box" thinking. Completely pursue scalable customer service through sustainable potentialities.<br><span>Photo by picjumbo.com from Pexels</span></p>
-              </article>
+            <div class="img-overlay blog-img" id="designing">
+              <div class="wave"></div>
+              <div class="wave"></div>
+              <div class="titles">
+                <h3 class="blog-title">A Designer's Guide to Programming</h3>
+                <span>Published 17th September</span>
+              </div>
+            </div>
+            <p>
+              Leverage agile frameworks to provide a robust synopsis for high
+              level overviews. Iterative approaches to corporate strategy foster
+              collaborative thinking to further the overall value proposition.
+              Organically grow the holistic world view of disruptive innovation
+              via workplace diversity and empowerment.
+            </p>
+            <p>
+              Bring to the table win-win survival strategies to ensure proactive
+              domination. At the end of the day, going forward, a new normal
+              that has evolved from generation X is on the runway heading
+              towards a streamlined cloud solution. User generated content in
+              real-time will have multiple touchpoints for offshoring.
+            </p>
+            <p>
+              Capitalize on low hanging fruit to identify a ballpark value added
+              activity to beta test. Override the digital divide with additional
+              clickthroughs from DevOps. Nanotechnology immersion along the
+              information highway will close the loop on focusing solely on the
+              bottom line.
+            </p>
+            <p>
+              Podcasting operational change management inside of workflows to
+              establish a framework. Taking seamless key performance indicators
+              offline to maximise the long tail. Keeping your eye on the ball
+              while performing a deep dive on the start-up mentality to derive
+              convergence on cross-platform integration.
+            </p>
+            <p>
+              Collaboratively administrate empowered markets via plug-and-play
+              networks. Dynamically procrastinate B2C users after installed base
+              benefits. Dramatically visualize customer directed convergence
+              without revolutionary ROI.
+            </p>
+            <p>
+              Efficiently unleash cross-media information without cross-media
+              value. Quickly maximize timely deliverables for real-time schemas.
+              Dramatically maintain clicks-and-mortar solutions without
+              functional solutions.
+            </p>
+            <p>
+              Completely synergize resource taxing relationships via premier
+              niche markets. Professionally cultivate one-to-one customer
+              service with robust ideas. Dynamically innovate resource-leveling
+              customer service for state of the art customer service.
+            </p>
+            <p>
+              Objectively innovate empowered manufactured products whereas
+              parallel platforms. Holisticly predominate extensible testing
+              procedures for reliable supply chains. Dramatically engage
+              top-line web services vis-a-vis cutting-edge deliverables.
+            </p>
+            <p>
+              Proactively envisioned multimedia based expertise and cross-media
+              growth strategies. Seamlessly visualize quality intellectual
+              capital without superior collaboration and idea-sharing.
+              Holistically pontificate installed base portals after maintainable
+              products.
+            </p>
+            <p>
+              Phosfluorescently engage worldwide methodologies with web-enabled
+              technology. Interactively coordinate proactive e-commerce via
+              process-centric "outside the box" thinking. Completely pursue
+              scalable customer service through sustainable potentialities.<br /><span
+                >Photo by picjumbo.com from Pexels</span
+              >
+            </p>
+          </article>
 
-              <article class="card wrapper">
-                  <div class="img-overlay blog-img" id="practice">
-                      <div class="wave"></div>
-                      <div class="wave"></div>
-                    <div class="titles">
-                      <h3 class="blog-title">Programming Practice makes Perfect.</h3>
-                        <span>Published 11th September</span>
-                      </div>
-                      </div>
-                      <p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
-                        </p><p>
-                          Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.
-                        </p><p>
-                          Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.
-                        </p><p>
-                          Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.
-                        </p><p>
-                          Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.
-                        </p><p>
-                          Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions.
-                        </p><p>
-                          Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service.
-                        </p><p>
-                          Objectively innovate empowered manufactured products whereas parallel platforms. Holisticly predominate extensible testing procedures for reliable supply chains. Dramatically engage top-line web services vis-a-vis cutting-edge deliverables.
-                        </p><p>
-                          Proactively envisioned multimedia based expertise and cross-media growth strategies. Seamlessly visualize quality intellectual capital without superior collaboration and idea-sharing. Holistically pontificate installed base portals after maintainable products.
-                        </p><p>
-                          Phosfluorescently engage worldwide methodologies with web-enabled technology. Interactively coordinate proactive e-commerce via process-centric "outside the box" thinking. Completely pursue scalable customer service through sustainable potentialities.<br><span>Photo by Tim Gouw from Pexels</span></p>
-               </article>
+          <!-- Third Card Component -->
+          <article class="card wrapper">
+            <div class="img-overlay blog-img" id="practice">
+              <div class="wave"></div>
+              <div class="wave"></div>
+              <div class="titles">
+                <h3 class="blog-title">Programming Practice makes Perfect.</h3>
+                <span>Published 11th September</span>
+              </div>
+            </div>
+            <p>
+              Leverage agile frameworks to provide a robust synopsis for high
+              level overviews. Iterative approaches to corporate strategy foster
+              collaborative thinking to further the overall value proposition.
+              Organically grow the holistic world view of disruptive innovation
+              via workplace diversity and empowerment.
+            </p>
+            <p>
+              Bring to the table win-win survival strategies to ensure proactive
+              domination. At the end of the day, going forward, a new normal
+              that has evolved from generation X is on the runway heading
+              towards a streamlined cloud solution. User generated content in
+              real-time will have multiple touchpoints for offshoring.
+            </p>
+            <p>
+              Capitalize on low hanging fruit to identify a ballpark value added
+              activity to beta test. Override the digital divide with additional
+              clickthroughs from DevOps. Nanotechnology immersion along the
+              information highway will close the loop on focusing solely on the
+              bottom line.
+            </p>
+            <p>
+              Podcasting operational change management inside of workflows to
+              establish a framework. Taking seamless key performance indicators
+              offline to maximise the long tail. Keeping your eye on the ball
+              while performing a deep dive on the start-up mentality to derive
+              convergence on cross-platform integration.
+            </p>
+            <p>
+              Collaboratively administrate empowered markets via plug-and-play
+              networks. Dynamically procrastinate B2C users after installed base
+              benefits. Dramatically visualize customer directed convergence
+              without revolutionary ROI.
+            </p>
+            <p>
+              Efficiently unleash cross-media information without cross-media
+              value. Quickly maximize timely deliverables for real-time schemas.
+              Dramatically maintain clicks-and-mortar solutions without
+              functional solutions.
+            </p>
+            <p>
+              Completely synergize resource taxing relationships via premier
+              niche markets. Professionally cultivate one-to-one customer
+              service with robust ideas. Dynamically innovate resource-leveling
+              customer service for state of the art customer service.
+            </p>
+            <p>
+              Objectively innovate empowered manufactured products whereas
+              parallel platforms. Holisticly predominate extensible testing
+              procedures for reliable supply chains. Dramatically engage
+              top-line web services vis-a-vis cutting-edge deliverables.
+            </p>
+            <p>
+              Proactively envisioned multimedia based expertise and cross-media
+              growth strategies. Seamlessly visualize quality intellectual
+              capital without superior collaboration and idea-sharing.
+              Holistically pontificate installed base portals after maintainable
+              products.
+            </p>
+            <p>
+              Phosfluorescently engage worldwide methodologies with web-enabled
+              technology. Interactively coordinate proactive e-commerce via
+              process-centric "outside the box" thinking. Completely pursue
+              scalable customer service through sustainable potentialities.<br /><span
+                >Photo by Tim Gouw from Pexels</span
+              >
+            </p>
+          </article>
 
-                  <article class="card wrapper">
-                      <div class="img-overlay blog-img" id="coding">
-                          <div class="wave"></div>
-                          <div class="wave"></div>
-                        <div class="titles">
-                          <h3 class="blog-title">Getting Started with Ruby</h3>
-                            <span>Published 5th September</span>
-                          </div>
-                          </div>
-                            <p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
-                            </p><p>
-                                Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.
-                              </p><p>
-                                Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.
-                              </p><p>
-                                Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</p>
-                      </article>
+          <!-- Fourth Card Component -->
+          <article class="card wrapper">
+            <div class="img-overlay blog-img" id="coding">
+              <div class="wave"></div>
+              <div class="wave"></div>
+              <div class="titles">
+                <h3 class="blog-title">Getting Started with Ruby</h3>
+                <span>Published 5th September</span>
+              </div>
+            </div>
+            <p>
+              Leverage agile frameworks to provide a robust synopsis for high
+              level overviews. Iterative approaches to corporate strategy foster
+              collaborative thinking to further the overall value proposition.
+              Organically grow the holistic world view of disruptive innovation
+              via workplace diversity and empowerment.
+            </p>
+            <p>
+              Bring to the table win-win survival strategies to ensure proactive
+              domination. At the end of the day, going forward, a new normal
+              that has evolved from generation X is on the runway heading
+              towards a streamlined cloud solution. User generated content in
+              real-time will have multiple touchpoints for offshoring.
+            </p>
+            <p>
+              Capitalize on low hanging fruit to identify a ballpark value added
+              activity to beta test. Override the digital divide with additional
+              clickthroughs from DevOps. Nanotechnology immersion along the
+              information highway will close the loop on focusing solely on the
+              bottom line.
+            </p>
+            <p>
+              Podcasting operational change management inside of workflows to
+              establish a framework. Taking seamless key performance indicators
+              offline to maximise the long tail. Keeping your eye on the ball
+              while performing a deep dive on the start-up mentality to derive
+              convergence on cross-platform integration.
+            </p>
+          </article>
 
-                      <article class="card wrapper">
-                          <div class="img-overlay blog-img" id="motivation">
-                              <div class="wave"></div>
-                              <div class="wave"></div>
-                            <div class="titles">
-                              <h3 class="blog-title">Sources of motivation at a Coding Bootcamp</h3>
-                                <span>Published 1st September</span>
-                              </div>
-                              </div>
-                                <p>It’s now week two of the Fast Track Bootcamp at Coder Academy in Brisbane and already there are some tired eyes and minds in the classroom.
-                                </p><p>
-                                    I was lucky enough to score some tickets to Wordcamp Brisbane (Big shout out to Steph!) which was held at QUT over the weekend. There was a whole heap of awesome information to take in with a host of awesome presenters at the event. Much of it was flying over my head but it was exciting seeing all of the amazing things happening across the industry.
-                                  </p><p>
-                                    Although the day to day early wake up and commute was a bit of a shock to the system at first, I’ve started to adjust (thanks in no small part to coffee!). 
-                                  </p><p>
-                                    The bootcamp is well and truly getting into gear now as we’ve been learning all about the powerful things we can do with object oriented programming.
-                                  </p><p>
-                                    Although it hasn’t been easy jamming so much into my brain at once, the course structure has made learning a fairly smooth process. So although I don’t find myself struggling for motivation at this point, I certainly have found myself being inspired. And it’s not come from where I expected it.
-                                  </p><p>
-                                    The bootcamp attracts a diverse range of people from all walks of life and it instantly becomes obvious that everyone learns different things at their own pace. Where some might have excelled at loops and flow control, they might now struggle a little with composition and inheritance.
-                                  </p><p>
-                                    What I’ve found incredible to watch is that, of those struggling at any given time, no one has a defeatist attitude. Perhaps even more awesome to see is that those around them offer support and guidance readily. 
-                                  </p><p>
-                                    So, with a long way still to go I’m glad to be surrounded by a wonderful group of people who are inspiring me everyday. <br><span>Photo by rawpixel.com from Pexels</span></p>
-                          </article>
+          <!-- Fifth Card Component -->
+          <article class="card wrapper">
+            <div class="img-overlay blog-img" id="motivation">
+              <div class="wave"></div>
+              <div class="wave"></div>
+              <div class="titles">
+                <h3 class="blog-title">
+                  Sources of motivation at a Coding Bootcamp
+                </h3>
+                <span>Published 1st September</span>
+              </div>
+            </div>
+            <p>
+              It’s now week two of the Fast Track Bootcamp at Coder Academy in
+              Brisbane and already there are some tired eyes and minds in the
+              classroom.
+            </p>
+            <p>
+              I was lucky enough to score some tickets to Wordcamp Brisbane (Big
+              shout out to Steph!) which was held at QUT over the weekend. There
+              was a whole heap of awesome information to take in with a host of
+              awesome presenters at the event. Much of it was flying over my
+              head but it was exciting seeing all of the amazing things
+              happening across the industry.
+            </p>
+            <p>
+              Although the day to day early wake up and commute was a bit of a
+              shock to the system at first, I’ve started to adjust (thanks in no
+              small part to coffee!).
+            </p>
+            <p>
+              The bootcamp is well and truly getting into gear now as we’ve been
+              learning all about the powerful things we can do with object
+              oriented programming.
+            </p>
+            <p>
+              Although it hasn’t been easy jamming so much into my brain at
+              once, the course structure has made learning a fairly smooth
+              process. So although I don’t find myself struggling for motivation
+              at this point, I certainly have found myself being inspired. And
+              it’s not come from where I expected it.
+            </p>
+            <p>
+              The bootcamp attracts a diverse range of people from all walks of
+              life and it instantly becomes obvious that everyone learns
+              different things at their own pace. Where some might have excelled
+              at loops and flow control, they might now struggle a little with
+              composition and inheritance.
+            </p>
+            <p>
+              What I’ve found incredible to watch is that, of those struggling
+              at any given time, no one has a defeatist attitude. Perhaps even
+              more awesome to see is that those around them offer support and
+              guidance readily.
+            </p>
+            <p>
+              So, with a long way still to go I’m glad to be surrounded by a
+              wonderful group of people who are inspiring me everyday.
+              <br /><span>Photo by rawpixel.com from Pexels</span>
+            </p>
+          </article>
 
-                          <article class="card wrapper">
-                              <div class="img-overlay blog-img" id="brisbane">
-                                  <div class="wave"></div>
-                                  <div class="wave"></div>
-                                <div class="titles">
-                                  <h3 class="blog-title">Coding Bootcamps, Meetups and .. Twitter?</h3>
-                                    <span>Published 26th August</span>
-                                  </div>
-                                  </div>
-                                    <p>When I sat down in the Coder Academy classroom on Monday morning I wasn’t sure what to expect. All I knew as that I was ready to jump into the world of programming, Ruby, loops and everything in between…</p><p>
-                                      <strong>“You need to get Twitter!”</strong></p><p>
-                                      At first I thought maybe I’d mistakenly ended up in the wrong classroom. It wouldn’t have been too far-fetched; I’d only arrived in Brisbane 4 days prior after moving from the (relatively) sleepy Central Queensland town of Rockhampton. The early start had me feeling a little groggy.</p><p>
-                                      After coming to my senses a bit more, I found out I was in fact in the right place. What I discovered was that my outlook for the course (and beyond!) was naive. Apparently there’s so much more to coding than sitting in a dark corner with headphones on plugging away at a keyboard endlessly!</p><p>
-                                      Okay, maybe I’m exaggerating my naivety a little bit.</p><p>
-                                      But I certainly wasn’t expecting there to be meetups and networking events nearly every single day (with PIZZA AND BEER). I had the fantastic experience of attending a Sectalks event last night. I tagged along with fellow ‘developer in the making’ Santiago (Check out his great posts here!). Although most of the presentation flew way over my head it was extremely interesting getting a sneak-peek into some of the things happening in and around Brisbane. There’s a bunch of awesome people doing some pretty amazing things every day and I can’t wait to immerse myself even further into the world of Brisbane tech.</p><p>
-                                      All of this and I’ve barely even touched on the course itself! But hey, there’s sure to be plenty of that to come.</p><p>
-                                      If you’re interested in getting some insight into a coding bootcamp at Coder Academy and life in Brisbane in general then keep an eye out — I’ll be posting here about my journey throughout the course.</p><p>
-                                      Follow me on Twitter @BenUlcoq (It’s bare at the moment — but I’ll get there!)<br><span>Photo by Valeriia Miller from Pexels</span></p>
-                                      
-                              </article>
-                      
-
-
-                            </div>
-  </section>
+          <!-- Sixth Card Component -->
+          <article class="card wrapper">
+            <div class="img-overlay blog-img" id="brisbane">
+              <div class="wave"></div>
+              <div class="wave"></div>
+              <div class="titles">
+                <h3 class="blog-title">
+                  Coding Bootcamps, Meetups and .. Twitter?
+                </h3>
+                <span>Published 26th August</span>
+              </div>
+            </div>
+            <p>
+              When I sat down in the Coder Academy classroom on Monday morning I
+              wasn’t sure what to expect. All I knew as that I was ready to jump
+              into the world of programming, Ruby, loops and everything in
+              between…
+            </p>
+            <p>
+              <strong>“You need to get Twitter!”</strong>
+            </p>
+            <p>
+              At first I thought maybe I’d mistakenly ended up in the wrong
+              classroom. It wouldn’t have been too far-fetched; I’d only arrived
+              in Brisbane 4 days prior after moving from the (relatively) sleepy
+              Central Queensland town of Rockhampton. The early start had me
+              feeling a little groggy.
+            </p>
+            <p>
+              After coming to my senses a bit more, I found out I was in fact in
+              the right place. What I discovered was that my outlook for the
+              course (and beyond!) was naive. Apparently there’s so much more to
+              coding than sitting in a dark corner with headphones on plugging
+              away at a keyboard endlessly!
+            </p>
+            <p>
+              Okay, maybe I’m exaggerating my naivety a little bit.
+            </p>
+            <p>
+              But I certainly wasn’t expecting there to be meetups and
+              networking events nearly every single day (with PIZZA AND BEER). I
+              had the fantastic experience of attending a Sectalks event last
+              night. I tagged along with fellow ‘developer in the making’
+              Santiago (Check out his great posts here!). Although most of the
+              presentation flew way over my head it was extremely interesting
+              getting a sneak-peek into some of the things happening in and
+              around Brisbane. There’s a bunch of awesome people doing some
+              pretty amazing things every day and I can’t wait to immerse myself
+              even further into the world of Brisbane tech.
+            </p>
+            <p>
+              All of this and I’ve barely even touched on the course itself! But
+              hey, there’s sure to be plenty of that to come.
+            </p>
+            <p>
+              If you’re interested in getting some insight into a coding
+              bootcamp at Coder Academy and life in Brisbane in general then
+              keep an eye out — I’ll be posting here about my journey throughout
+              the course.
+            </p>
+            <p>
+              Follow me on Twitter @BenUlcoq (It’s bare at the moment — but I’ll
+              get there!)<br /><span>Photo by Valeriia Miller from Pexels</span>
+            </p>
+          </article>
+        </div>
+      </section>
     </main>
+
+    <!-- Footer component containing alternative navigation -->
     <footer>
-    
+      <!-- Wave Visual Component -->
       <div class="wave"></div>
       <div class="footer-wrapper">
-        <a href="./index.html" id="logo"><img alt="Home page" class="logo" src="./assets/icons/Logo.svg"/></a>
-        <nav><ul class="footer-menu">
+        <a href="./index.html" id="logo"
+          ><img alt="Home page" class="logo" src="./assets/icons/Logo.svg"
+        /></a>
+        <nav>
+          <ul class="footer-menu">
             <li><a href="./index.html">Home</a></li>
             <li><a href="./projects.html">Projects</a></li>
-            <li><strong><span class="current">Current Page</span>Blog</strong></li>
+            <li>
+              <strong><span class="current">Current Page</span>Blog</strong>
+            </li>
             <li><a href="./contact.html">Contact</a></li>
-        </ul></nav>
+          </ul>
+        </nav>
         <nav class="icons">
-            <a href="https://www.linkedin.com/in/ben-ulcoq/" target="_blank" rel="noreferrer" class="fab fa-linkedin fa-fw"><span>LinkedIn</span></a>
-            <a href="https://github.com/BenUlcoq" target="_blank" rel="noreferrer" class="fab fa-github-square fa-fw"><span>Github</span></a>
-            <a href="https://twitter.com/BenUlcoq" target="_blank" rel="noreferrer" class="fab fa-twitter-square fa-fw"><span>Twitter</span></a>
+          <a
+            href="https://www.linkedin.com/in/ben-ulcoq/"
+            target="_blank"
+            rel="noreferrer"
+            class="fab fa-linkedin fa-fw"
+            ><span>LinkedIn</span></a
+          >
+          <a
+            href="https://github.com/BenUlcoq"
+            target="_blank"
+            rel="noreferrer"
+            class="fab fa-github-square fa-fw"
+            ><span>Github</span></a
+          >
+          <a
+            href="https://twitter.com/BenUlcoq"
+            target="_blank"
+            rel="noreferrer"
+            class="fab fa-twitter-square fa-fw"
+            ><span>Twitter</span></a
+          >
         </nav>
       </div>
     </footer>
+
+    <!-- Contact Popup Component -->
     <div class="popup overlay hidden">
-        <a href="javascript:;" id="close-popup" tabindex="0" class="fas fa-times"></a>
-        <div class="popup wave hidden"></div>
+      <a
+        href="javascript:;"
+        id="close-popup"
+        tabindex="0"
+        class="fas fa-times"
+      ></a>
+      <div class="popup wave hidden"></div>
     </div>
-    <iframe title="Contact Form Popup" class="popup hidden" src="contact.html" sandbox="allow-same-origin allow-scripts allow-forms">
+    <iframe
+      title="Contact Form Popup"
+      class="popup hidden"
+      src="contact.html"
+      sandbox="allow-same-origin allow-scripts allow-forms"
+    >
     </iframe>
   </body>
-  </html>
+</html>

@@ -35,7 +35,8 @@
 }
 
 @-webkit-keyframes swell {
-  0%, 100% {
+  0%,
+  100% {
     -webkit-transform: translateY(1vh);
             transform: translateY(1vh);
   }
@@ -46,7 +47,8 @@
 }
 
 @keyframes swell {
-  0%, 100% {
+  0%,
+  100% {
     -webkit-transform: translateY(1vh);
             transform: translateY(1vh);
   }
@@ -92,16 +94,6 @@ a:hover {
   opacity: 0.6;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
-}
-
-#open-navmenu:focus {
-  color: red;
-  outline: none;
-}
-
-.current {
-  font-size: 0px;
-  visibility: hidden;
 }
 
 header {
@@ -273,6 +265,10 @@ main.dark {
   padding-bottom: 100px;
 }
 
+main.dark.hidden {
+  padding: 0;
+}
+
 main#contact {
   background: none;
 }
@@ -290,26 +286,40 @@ main#contact {
           align-items: center;
 }
 
-.heading {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.wave {
+  background: url(./assets/icons/newwave.svg) repeat-x;
+  position: absolute;
+  background-size: contain;
+  width: 100vw;
+  height: 100px;
+  opacity: 1;
+  -webkit-animation: wave 10s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+          animation: wave 10s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
 }
 
-.about {
-  background: -webkit-gradient(linear, left bottom, left top, from(#000046), to(#1cb5e0));
-  background: linear-gradient(to top, #000046 0%, #1cb5e0 100%);
-  color: white;
-  position: relative;
-  min-height: 100vh;
-  padding-bottom: 100px;
+.wave:nth-of-type(2):not(.popup) {
+  -webkit-animation: wave 10s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.5s infinite, swell 10s ease -1.25s infinite;
+          animation: wave 10s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.5s infinite, swell 10s ease -1.25s infinite;
+  opacity: 0.5;
+  position: absolute;
+}
+
+.content {
+  max-width: 80%;
+  margin: 5% auto;
+}
+
+.page-title {
+  -webkit-transition: line-height 200ms, opacity 200ms, margin 200ms;
+  transition: line-height 200ms, opacity 200ms, margin 200ms;
+}
+
+.page-title.hidden {
+  margin: 0;
+  line-height: 0;
+  opacity: 0;
+  -webkit-transition: line-height 200ms, opacity 200ms, margin 200ms;
+  transition: line-height 200ms, opacity 200ms, margin 200ms;
 }
 
 .landing {
@@ -354,6 +364,28 @@ main#contact {
   text-align: center;
   color: #10417d;
   margin-top: 3em;
+}
+
+.about {
+  background: -webkit-gradient(linear, left bottom, left top, from(#000046), to(#1cb5e0));
+  background: linear-gradient(to top, #000046 0%, #1cb5e0 100%);
+  color: white;
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 100px;
+}
+
+.heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .grid {
@@ -456,6 +488,135 @@ main#contact {
 .icons h3 {
   width: 100%;
   text-align: center;
+}
+
+.skillset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.skillset h2 {
+  font-size: 1.8em;
+  width: 100%;
+  text-align: center;
+  margin: 1em auto 0 auto;
+}
+
+.skillset h3 {
+  font-size: 1.2em;
+  width: 100%;
+  text-align: center;
+}
+
+.skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 80%;
+  margin: auto;
+}
+
+.skill-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 110px;
+  height: 110px;
+}
+
+.skill-wrapper p {
+  width: 100%;
+  text-align: center;
+  margin-top: 3px;
+  margin-bottom: 2em;
+}
+
+.skill {
+  width: 50px;
+  height: auto;
+}
+
+#ruby {
+  width: 40px;
+  margin: 5px;
+}
+
+#html5 {
+  margin: 3px;
+  width: 44px;
+  height: auto;
+}
+
+#css3 {
+  margin: 3px;
+  width: 44px;
+  height: auto;
+}
+
+#more {
+  -webkit-animation: spin 15s linear infinite;
+          animation: spin 15s linear infinite;
+}
+
+.fa-chevron-down {
+  font-size: 2em;
+}
+
+.chevron-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 16vh;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 70, 0.8)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to top, rgba(0, 0, 70, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.chevron-container.scrolled {
+  background: none;
+  height: 0px;
+  overflow: hidden;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  opacity: 0;
+}
+
+.border {
+  width: 100%;
+  position: static;
+  height: 15vh;
+  min-height: 100px;
 }
 
 footer {
@@ -603,65 +764,6 @@ footer .wave {
   margin: auto;
 }
 
-.border {
-  width: 100%;
-  position: static;
-  height: 15vh;
-  min-height: 100px;
-}
-
-.wave {
-  background: url(./assets/icons/newwave.svg) repeat-x;
-  position: absolute;
-  background-size: contain;
-  width: 100vw;
-  height: 100px;
-  opacity: 1;
-  -webkit-animation: wave 10s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
-          animation: wave 10s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
-}
-
-.wave:nth-of-type(2):not(.popup) {
-  -webkit-animation: wave 10s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.5s infinite, swell 10s ease -1.25s infinite;
-          animation: wave 10s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.5s infinite, swell 10s ease -1.25s infinite;
-  opacity: 0.5;
-  position: absolute;
-}
-
-.content {
-  max-width: 80%;
-  margin: 5% auto;
-}
-
-.fa-chevron-down {
-  font-size: 2em;
-}
-
-.chevron-container {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 16vh;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 70, 0.8)), to(rgba(255, 255, 255, 0)));
-  background: linear-gradient(to top, rgba(0, 0, 70, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
-}
-
-.chevron-container.scrolled {
-  background: none;
-  height: 0px;
-  overflow: hidden;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  opacity: 0;
-}
-
 .homepage header {
   display: none;
 }
@@ -758,24 +860,14 @@ header.scrollUp .mobile-nav.clicked {
   display: none;
 }
 
-.mobile-nav.clicked {
-  width: 475px;
-  height: 475px;
-  left: calc(100vw - 277px);
-  top: unset;
+.mobile-nav.clic .current {
+  font-size: 0px;
+  visibility: hidden;
 }
 
-.page-title {
-  -webkit-transition: line-height 200ms, opacity 200ms, margin 200ms;
-  transition: line-height 200ms, opacity 200ms, margin 200ms;
-}
-
-.page-title.hidden {
-  margin: 0;
-  line-height: 0;
-  opacity: 0;
-  -webkit-transition: line-height 200ms, opacity 200ms, margin 200ms;
-  transition: line-height 200ms, opacity 200ms, margin 200ms;
+#open-navmenu:focus {
+  color: red;
+  outline: none;
 }
 
 .cards > h2 {
@@ -831,10 +923,6 @@ header.scrollUp .mobile-nav.clicked {
   margin: 0;
   -webkit-transition: line-height 200ms, opacity 200ms, margin 200ms;
   transition: line-height 200ms, opacity 200ms, margin 200ms;
-}
-
-main.dark.hidden {
-  padding: 0;
 }
 
 .card {
@@ -903,6 +991,118 @@ main.dark.hidden {
 
 .card .img-overlay span {
   margin: 0.5em 0;
+}
+
+.card .img-overlay#brisbane {
+  background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(33%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0))), url(./assets/Cards/brisbane.jpg);
+  background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0.5) 33%, rgba(0, 0, 0, 0) 100%), url(./assets/Cards/brisbane.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card .img-overlay#terminal-application {
+  background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(33%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0))), url(./assets/Cards/Poker.png);
+  background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0.5) 33%, rgba(0, 0, 0, 0) 100%), url(./assets/Cards/Poker.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card .img-overlay#Driftwood-cards {
+  background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(33%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0))), url(./assets/Cards/driftwood.jpg);
+  background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0.5) 33%, rgba(0, 0, 0, 0) 100%), url(./assets/Cards/driftwood.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card .img-overlay#FFC-whales {
+  background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(33%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0))), url(./assets/Cards/ffc-whales.jpg);
+  background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0.5) 33%, rgba(0, 0, 0, 0) 100%), url(./assets/Cards/ffc-whales.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card .img-overlay#Diamond-Z {
+  background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(33%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0))), url(./assets/Cards/diamondz.jpg);
+  background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0.5) 33%, rgba(0, 0, 0, 0) 100%), url(./assets/Cards/diamondz.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card .img-overlay#CQG-banners {
+  background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(33%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0))), url(./assets/Cards/cqg-banners.jpg);
+  background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0.5) 33%, rgba(0, 0, 0, 0) 100%), url(./assets/Cards/cqg-banners.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card .img-overlay#Gateway-brochure {
+  background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(33%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0))), url(./assets/Cards/gateway.jpg);
+  background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0.5) 33%, rgba(0, 0, 0, 0) 100%), url(./assets/Cards/gateway.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card .img-overlay#Synclift-cap {
+  background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(33%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0))), url(./assets/Cards/synclift.jpg);
+  background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0.5) 33%, rgba(0, 0, 0, 0) 100%), url(./assets/Cards/synclift.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card .img-overlay#portfolio {
+  background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(33%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0))), url(./assets/Cards/Portfolio.jpg);
+  background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0.5) 33%, rgba(0, 0, 0, 0) 100%), url(./assets/Cards/Portfolio.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card .img-overlay#motivation {
+  background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(33%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0))), url(./assets/Cards/motivation.jpg);
+  background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0.5) 33%, rgba(0, 0, 0, 0) 100%), url(./assets/Cards/motivation.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card .img-overlay#practice {
+  background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(33%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0))), url(./assets/Cards/practice.jpg);
+  background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0.5) 33%, rgba(0, 0, 0, 0) 100%), url(./assets/Cards/practice.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card .img-overlay#coding {
+  background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(33%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0))), url(./assets/Cards/coding.jpg);
+  background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0.5) 33%, rgba(0, 0, 0, 0) 100%), url(./assets/Cards/coding.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card .img-overlay#designing {
+  background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(33%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0))), url(./assets/Cards/designing.jpg);
+  background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0.5) 33%, rgba(0, 0, 0, 0) 100%), url(./assets/Cards/designing.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card .img-overlay#celebrate {
+  background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(33%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0))), url(./assets/Cards/celebrate.jpg);
+  background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0.5) 33%, rgba(0, 0, 0, 0) 100%), url(./assets/Cards/celebrate.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .card .titles {
@@ -1002,105 +1202,6 @@ main.dark.hidden {
   margin: 0;
   -webkit-transition: opacity 500ms, width 500ms, height 500ms;
   transition: opacity 500ms, width 500ms, height 500ms;
-}
-
-.wave-wrapper {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.skillset {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 100%;
-}
-
-.skillset h2 {
-  font-size: 1.8em;
-  width: 100%;
-  text-align: center;
-  margin: 1em auto 0 auto;
-}
-
-.skillset h3 {
-  font-size: 1.2em;
-  width: 100%;
-  text-align: center;
-}
-
-.skills {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  width: 80%;
-  margin: auto;
-}
-
-.skill-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 110px;
-  height: 110px;
-}
-
-.skill-wrapper p {
-  width: 100%;
-  text-align: center;
-  margin-top: 3px;
-  margin-bottom: 2em;
-}
-
-.skill {
-  width: 50px;
-  height: auto;
-}
-
-#ruby {
-  width: 40px;
-  margin: 5px;
-}
-
-#html5 {
-  margin: 3px;
-  width: 44px;
-  height: auto;
-}
-
-#css3 {
-  margin: 3px;
-  width: 44px;
-  height: auto;
-}
-
-#more {
-  -webkit-animation: spin 15s linear infinite;
-          animation: spin 15s linear infinite;
 }
 
 #contact > h1 {
@@ -1287,118 +1388,6 @@ iframe footer {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   opacity: 0;
-}
-
-#brisbane {
-  background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(33%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0))), url(./assets/Cards/brisbane.jpg);
-  background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0.5) 33%, rgba(0, 0, 0, 0) 100%), url(./assets/Cards/brisbane.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-#terminal-application {
-  background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(33%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0))), url(./assets/Cards/Poker.png);
-  background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0.5) 33%, rgba(0, 0, 0, 0) 100%), url(./assets/Cards/Poker.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-#Driftwood-cards {
-  background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(33%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0))), url(./assets/Cards/driftwood.jpg);
-  background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0.5) 33%, rgba(0, 0, 0, 0) 100%), url(./assets/Cards/driftwood.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-#FFC-whales {
-  background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(33%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0))), url(./assets/Cards/ffc-whales.jpg);
-  background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0.5) 33%, rgba(0, 0, 0, 0) 100%), url(./assets/Cards/ffc-whales.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-#Diamond-Z {
-  background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(33%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0))), url(./assets/Cards/diamondz.jpg);
-  background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0.5) 33%, rgba(0, 0, 0, 0) 100%), url(./assets/Cards/diamondz.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-#CQG-banners {
-  background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(33%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0))), url(./assets/Cards/cqg-banners.jpg);
-  background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0.5) 33%, rgba(0, 0, 0, 0) 100%), url(./assets/Cards/cqg-banners.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-#Gateway-brochure {
-  background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(33%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0))), url(./assets/Cards/gateway.jpg);
-  background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0.5) 33%, rgba(0, 0, 0, 0) 100%), url(./assets/Cards/gateway.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-#Synclift-cap {
-  background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(33%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0))), url(./assets/Cards/synclift.jpg);
-  background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0.5) 33%, rgba(0, 0, 0, 0) 100%), url(./assets/Cards/synclift.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-#portfolio {
-  background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(33%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0))), url(./assets/Cards/Portfolio.jpg);
-  background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0.5) 33%, rgba(0, 0, 0, 0) 100%), url(./assets/Cards/Portfolio.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-#motivation {
-  background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(33%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0))), url(./assets/Cards/motivation.jpg);
-  background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0.5) 33%, rgba(0, 0, 0, 0) 100%), url(./assets/Cards/motivation.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-#practice {
-  background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(33%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0))), url(./assets/Cards/practice.jpg);
-  background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0.5) 33%, rgba(0, 0, 0, 0) 100%), url(./assets/Cards/practice.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-#coding {
-  background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(33%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0))), url(./assets/Cards/coding.jpg);
-  background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0.5) 33%, rgba(0, 0, 0, 0) 100%), url(./assets/Cards/coding.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-#designing {
-  background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(33%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0))), url(./assets/Cards/designing.jpg);
-  background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0.5) 33%, rgba(0, 0, 0, 0) 100%), url(./assets/Cards/designing.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-#celebrate {
-  background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(33%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0))), url(./assets/Cards/celebrate.jpg);
-  background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0.5) 33%, rgba(0, 0, 0, 0) 100%), url(./assets/Cards/celebrate.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 @media only screen and (min-width: 800px) {
