@@ -30,19 +30,13 @@ $(document).ready(function() {
       $(".dark").toggleClass("hidden");
       $(".cards-wrapper").toggleClass("hidden");
       $(".cards").toggleClass("hidden");
-      $(".card")
-        .not(this)
-        .removeClass("open");
-      $(".card")
-        .not(this)
-        .toggleClass("hidden");
+      $(".card").not(this).removeClass("open");
+      $(".card").not(this).toggleClass("hidden");
       $(this).toggleClass("open");
       $("header").toggle();
       $("footer").toggle();
       $(".page-title").toggleClass("hidden");
-      $(this)
-        .siblings("h3")
-        .toggleClass("hidden");
+      $(this).siblings("h3").toggleClass("hidden");
     });
   });
 
@@ -52,9 +46,7 @@ $(document).ready(function() {
       $("#close-navmenu").toggle();
       $("#close-navmenu").focus();
       $(".mobile-nav").toggleClass("clicked");
-      $(".mobile-nav")
-        .find("li")
-        .toggle();
+      $(".mobile-nav").find("li").toggle();
     });
   });
 
@@ -64,9 +56,7 @@ $(document).ready(function() {
       $("#open-navmenu").toggle();
       $("#open-navmenu").focus();
       $(".mobile-nav").toggleClass("clicked");
-      $(".mobile-nav")
-        .find("li")
-        .toggle();
+      $(".mobile-nav").find("li").toggle();
     });
   });
 
@@ -78,28 +68,14 @@ $(document).ready(function() {
 
   $(function() {
     $("#open-popup").click(function() {
-      $("body")
-        .find(".popup")
-        .toggleClass("hidden");
+      $("body").find(".popup").toggleClass("hidden");
     });
   });
 
   $("iframe").on("load", function() {
-    $(this)
-      .contents()
-      .find("header")
-      .remove();
-    $(this)
-      .contents()
-      .find("footer")
-      .remove();
-    $(this)
-      .contents()
-      .find("main")
-      .css("padding-bottom", "0");
-    $(this)
-      .contents()
-      .find("form")
-      .css("margin-bottom", "0");
+    $(this).contents().find("header").remove();
+    $(this).contents().find("footer").remove();
+    $(this).contents().find("main").css("padding-bottom", "0");
+    $(this).contents().find("form").css("margin-bottom", "0");
   });
 });

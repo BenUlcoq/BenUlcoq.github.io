@@ -504,52 +504,60 @@ header.scrollUp {
   }
 }
 .mobile-nav {
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  background: white;
-  @include flex-wrap;
-  justify-content: center;
-  overflow: hidden;
-  flex-flow: column nowrap;
-  color: $main-blue;
-  position: relative;
-  left: calc(100vw - 60px);
-  top: 0;
-  margin: 0.5em;
-  transition: transform 500ms, width 200ms, height 200ms, left 200ms, top 0ms;
-  z-index: 200;
-  box-shadow: 0px 4px 8px rgba(0, 0, 70, 0.5);
-  .fa-times {
-    display: none;
-  }
-  > a {
-    position: absolute;
-    font-size: 1.5em;
-    color: $main-blue;
-    cursor: pointer;
-  }
-  ul {
-    list-style: none;
-    color: inherit;
-    display: flex;
-    flex-flow: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-    position: absolute;
-    right: 48%;
-    top: 51%;
-    font-size: 1.2em;
-    li {
-      margin: 0.5em 0;
-      display: none;
-    }
-  }
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+	background: white;
+	@include flex-wrap;
+	justify-content: center;
+	overflow: hidden;
+	flex-flow: column nowrap;
+	color: $main-blue;
+	position: relative;
+	left: calc(100vw - 60px);
+	top: 0;
+	margin: 0.5em;
+	transition: transform 500ms, width 200ms, height 200ms, left 200ms, top 0ms;
+	z-index: 200;
+	box-shadow: 0px 4px 8px rgba(0, 0, 70, 0.5);
+	.fa-times {
+		display: none;
+	}
+	>a {
+		position: absolute;
+		font-size: 1.5em;
+		color: $main-blue;
+		cursor: pointer;
+	}
+	ul {
+		list-style: none;
+		color: inherit;
+		display: flex;
+		flex-flow: column;
+		justify-content: flex-end;
+		align-items: flex-end;
+		position: absolute;
+		right: 48%;
+		top: 51%;
+		font-size: 1.2em;
+		li {
+			margin: 0.5em 0;
+			display: none;
+		}
+	}
 }
-.mobile-nav.clic .current {
+.mobile-nav.clicked {
+	width: 475px;
+	height: 475px;
+	left: calc(100vw - 277px);
+	top: unset;
+}
+  
+.mobile-nav li .current {
   font-size: 0px;
   visibility: hidden;
 }
+
 
 #open-navmenu {
   &:focus {
